@@ -15,6 +15,12 @@
     <body class="no-touch" ontouchstart="">
         <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
             <?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <symbol viewBox="0 0 23 23" id="cross" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M22.5 23a.5.5 0 01-.3-.1L11.4 12.2.8 23a.5.5 0 01-.7 0 .5.5 0 010-.7l10.7-10.7L0 .8a.5.5 0 010-.7.5.5 0 01.8 0l10.6 10.7L22.1 0a.5.5 0 01.7 0 .5.5 0 01.2.4.5.5 0 01-.1.3L12.2 11.5 23 22.1a.5.5 0 010 .7.5.5 0 01-.4.2z"
+                        fill="#141215"
+                    />
+                </symbol>
                 <symbol viewBox="0 0 46 46" id="down-arrow" xmlns="http://www.w3.org/2000/svg">
                     <path d="M23 46a23 23 0 1123-23 23 23 0 01-23 23zm0-45a22 22 0 1022 22A22 22 0 0023 1z" />
                     <path fill="currentColor" d="M23 26.7l-4.4-4.3.8-.8 3.6 3.7 3.6-3.7.8.8-4.4 4.3z" />
@@ -1008,6 +1014,22 @@
                                         </ul>
                                     </div>
                                 </div>
+                                <div class="footer">
+                                    <ul class="footer__list">
+                                        <li class="footer__list-item">
+                                            <a href="#" class="footer__link">Вакансии</a>
+                                        </li>
+                                        <li class="footer__list-item">
+                                            <a href="#" class="footer__link">Руководитель</a>
+                                        </li>
+                                        <li class="footer__list-item">
+                                            <a href="#" class="footer__link">Реквизиты</a>
+                                        </li>
+                                        <li class="footer__list-item">
+                                            <a href="#" class="footer__link">Контактная информация</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1024,8 +1046,29 @@
                     </span>
                 </button>
                 <div class="page-sidebar-right__menu">
-                    <div class="page-sidebar-right__menu-content"></div>
-                    <a href="#" class="page-sidebar-right__menu-click-btn">
+                    <div class="page-sidebar-right__menu-content">
+                        <ul class="page-sidebar-right__menu-list">
+                            <li class="page-sidebar-right__menu-list-item">
+                                <a href="#" class="page-sidebar-right__menu-link">Главная</a>
+                            </li>
+                            <li class="page-sidebar-right__menu-list-item">
+                                <a href="#" class="page-sidebar-right__menu-link">Проекты</a>
+                            </li>
+                            <li class="page-sidebar-right__menu-list-item">
+                                <a href="#" class="page-sidebar-right__menu-link">Услуги</a>
+                            </li>
+                            <li class="page-sidebar-right__menu-list-item">
+                                <a href="#" class="page-sidebar-right__menu-link">Пресс-центр</a>
+                            </li>
+                            <li class="page-sidebar-right__menu-list-item">
+                                <a href="#" class="page-sidebar-right__menu-link">Карьера</a>
+                            </li>
+                            <li class="page-sidebar-right__menu-list-item">
+                                <a href="#" class="page-sidebar-right__menu-link">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" class="page-sidebar-right__menu-click-btn js-menu-view-more">
                         <span class="page-sidebar-right__menu-click-btn-text">
                             Смотреть дальше
                         </span>
@@ -1036,6 +1079,40 @@
                         <use xlink:href="#down-arrow" />
                     </svg>
                 </button>
+            </div>
+            <div class="page-modals">
+                <div class="modal js-modal" id="more">
+                    <div class="modal__content">
+                        <div class="apply-modal">
+                            <a href="#" class="apply-modal__close-btn js-modal-close">
+                                <svg width="22" height="22" aria-hidden="true" class="icon-cross">
+                                    <use xlink:href="#cross" />
+                                </svg>
+                            </a>
+                            <div class="apply-modal__left-column">
+                                <img src="img/architecture.jpg" alt="" class="apply-modal__image" />
+                            </div>
+                            <div class="apply-modal__right-column">
+                                <div class="apply-modal__form-block">
+                                    <h4 class="apply-modal__heading">
+                                        Оставьте свой номер и мы вам перезвоним!
+                                    </h4>
+                                    <form action="/" method="POST" class="apply-modal__form">
+                                        <div class="apply-modal__form-row">
+                                            <input type="text" name="name" class="apply-modal__input" placeholder="Имя" />
+                                        </div>
+                                        <div class="apply-modal__form-row">
+                                            <input type="tel" name="phone" class="apply-modal__input" placeholder="Телефон" />
+                                        </div>
+                                        <button class="apply-modal__submit" type="submit">
+                                            Перезвоните мне
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

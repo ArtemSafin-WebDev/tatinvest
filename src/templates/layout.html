@@ -6,8 +6,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap&subset=cyrillic" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=cyrillic" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap&subset=cyrillic" rel="stylesheet" />
 
         <link rel="stylesheet" href="css/styles.min.css" />
         <title>
@@ -22,8 +22,8 @@
         <div class="page-content">
             <div class="page-sidebar-left">
                 <div class="page-sidebar-left__logo-block">
-                    <img src="img/logo/logo-dark.svg" alt="Темное лого" class="page-sidebar-left__logo page-sidebar-left__logo--dark">
-                    <img src="img/logo/logo-light.svg" alt="Темное лого" class="page-sidebar-left__logo page-sidebar-left__logo--light">
+                    <img src="img/logo/logo-dark.svg" alt="Темное лого" class="page-sidebar-left__logo page-sidebar-left__logo--dark" />
+                    <img src="img/logo/logo-light.svg" alt="Темное лого" class="page-sidebar-left__logo page-sidebar-left__logo--light" />
                 </div>
                 <div class="page-sidebar-left__page-number">
                     <span class="page-sidebar-left__page-number-line"></span>
@@ -49,9 +49,28 @@
                 </button>
                 <div class="page-sidebar-right__menu">
                     <div class="page-sidebar-right__menu-content">
-
+                        <ul class="page-sidebar-right__menu-list">
+                            <li class="page-sidebar-right__menu-list-item">
+                                <a href="#" class="page-sidebar-right__menu-link">Главная</a>
+                            </li>
+                            <li class="page-sidebar-right__menu-list-item">
+                                <a href="#" class="page-sidebar-right__menu-link">Проекты</a>
+                            </li>
+                            <li class="page-sidebar-right__menu-list-item">
+                                <a href="#" class="page-sidebar-right__menu-link">Услуги</a>
+                            </li>
+                            <li class="page-sidebar-right__menu-list-item">
+                                <a href="#" class="page-sidebar-right__menu-link">Пресс-центр</a>
+                            </li>
+                            <li class="page-sidebar-right__menu-list-item">
+                                <a href="#" class="page-sidebar-right__menu-link">Карьера</a>
+                            </li>
+                            <li class="page-sidebar-right__menu-list-item">
+                                <a href="#" class="page-sidebar-right__menu-link">Контакты</a>
+                            </li>
+                        </ul>
                     </div>
-                    <a href="#" class="page-sidebar-right__menu-click-btn">
+                    <a href="#" class="page-sidebar-right__menu-click-btn js-menu-view-more">
                         <span class="page-sidebar-right__menu-click-btn-text">
                             Смотреть дальше
                         </span>
@@ -62,7 +81,40 @@
                         <use xlink:href="#down-arrow" />
                     </svg>
                 </button>
-
+            </div>
+            <div class="page-modals">
+                <div class="modal js-modal" id="more">
+                    <div class="modal__content">
+                        <div class="apply-modal">
+                            <a href="#" class="apply-modal__close-btn js-modal-close">
+                                <svg width="22" height="22" aria-hidden="true" class="icon-cross">
+                                    <use xlink:href="#cross" />
+                                </svg>
+                            </a>
+                            <div class="apply-modal__left-column">
+                                <img src="img/architecture.jpg" alt="" class="apply-modal__image" />
+                            </div>
+                            <div class="apply-modal__right-column">
+                                <div class="apply-modal__form-block">
+                                    <h4 class="apply-modal__heading">
+                                        Оставьте свой номер и мы вам перезвоним!
+                                    </h4>
+                                    <form action="/" method="POST" class="apply-modal__form">
+                                        <div class="apply-modal__form-row">
+                                            <input type="text" name="name" class="apply-modal__input" placeholder="Имя" />
+                                        </div>
+                                        <div class="apply-modal__form-row">
+                                            <input type="tel" name="phone" class="apply-modal__input" placeholder="Телефон" />
+                                        </div>
+                                        <button class="apply-modal__submit" type="submit">
+                                            Перезвоните мне
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

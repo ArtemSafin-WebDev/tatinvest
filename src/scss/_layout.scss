@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: background-color .2s, border-color .2s;
+    transition: background-color 0.2s, border-color 0.2s;
     @include breakpoint(mobile) {
         display: none;
     }
@@ -34,16 +34,15 @@
 
     padding-left: 2rem;
     padding-right: 2rem;
-    
+
     .dark-elements & {
-        border-color: #2B292C;
+        border-color: #2b292c;
     }
-    
 }
 .page-sidebar-right {
     border-left: 1px solid #bcbbbc;
     .dark-elements & {
-        border-color: #2B292C;
+        border-color: #2b292c;
     }
 
     .first-section & {
@@ -65,7 +64,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 10rem;
-    transition: color .2s;
+    transition: color 0.2s;
     .dark-elements & {
         color: white;
     }
@@ -77,7 +76,7 @@
     display: block;
     background-color: #bcbbbc;
     position: relative;
-    transition: background-color .2s;
+    transition: background-color 0.2s;
     &::after {
         content: '';
         width: 2px;
@@ -90,7 +89,7 @@
     }
 
     .dark-elements & {
-        background-color: #5A595B;
+        background-color: #5a595b;
     }
 }
 
@@ -107,7 +106,7 @@
     width: 100%;
     height: auto;
     max-width: none;
-    transition: opacity .2s;
+    transition: opacity 0.2s;
     .dark-elements &--dark {
         opacity: 0;
     }
@@ -142,7 +141,7 @@
     & > span {
         height: 1px;
         background-color: $darkest;
-        transition: transform 0.3s, background-color .2s;
+        transition: transform 0.3s, background-color 0.2s;
         &:nth-child(1) {
             transform: scaleX(1.5) translateY(4px);
         }
@@ -155,7 +154,7 @@
         background-color: white;
     }
 
-    .page-sidebar-right__burger.active & > span {
+    .side-menu-open & > span {
         &:nth-child(1) {
             transform: translateY(9.5px) rotate(45deg);
         }
@@ -167,6 +166,13 @@
 
 .page-sidebar-right__burger-text {
     opacity: 0;
+    transition: opacity 0.2s;
+    .dark-elements & {
+        color: white;
+    }
+    .side-menu-open & {
+        opacity: 1;
+    }
 }
 
 .page-sidebar-right__menu {
@@ -186,6 +192,7 @@
     line-height: 1.4;
     letter-spacing: 0.13em;
     text-transform: uppercase;
+    transition: all 0.2s;
     &:link,
     &:visited {
         color: $darkest;
@@ -194,14 +201,20 @@
     .dark-elements & {
         color: white;
     }
+
+    .side-menu-open & {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s, visibility 0s linear 0.2s;
+    }
 }
 
 .page-sidebar-right__menu-click-btn-text {
-   white-space: nowrap;
-   left: 50%;
-   top: 50%;
-   position: absolute;
-   transform: translate(-50%, -50%) rotate(-90deg);
+    white-space: nowrap;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(-90deg);
 }
 
 .page-sidebar-right__arrow {
@@ -210,13 +223,12 @@
     display: block;
     margin: 0 auto;
     border-radius: 50%;
-    transition: background-color 0.2s, color 0.2s, transform .2s;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
     .no-touch &:hover,
     .touch &:active {
         background-color: black;
         color: white;
     }
-
 
     .last-section & {
         transform: rotate(180deg);
@@ -240,6 +252,46 @@
     .dark-elements.touch &:active {
         background-color: white;
         color: black;
+    }
+}
+
+
+.page-sidebar-right__menu-content {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s, visibility 0s linear .2s;
+    .side-menu-open & {
+        opacity: 1;
+        visibility: visible;
+        transition: .2s;
+    }
+}
+
+.page-sidebar-right__menu-list {
+    margin-top: 9rem;
+}
+
+.page-sidebar-right__menu-list-item {
+    margin-bottom: 5rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.page-sidebar-right__menu-link {
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: black;
+    display: block;
+    &:link,
+    &:visited {
+        color: black;
+    }
+
+    .dark-elements & {
+        color: white;
     }
 }
 

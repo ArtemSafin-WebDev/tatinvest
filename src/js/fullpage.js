@@ -3,6 +3,8 @@ import aboutUsSlider from './aboutUsSlider';
 import tabs from './tabs';
 import projectsSlider from './projectsSlider';
 import lastNewsSlider from './lastNewsSlider';
+import sideMenu from './sideMenu';
+import modals from './modals';
 
 export default function() {
     let lastSection = false;
@@ -72,6 +74,14 @@ export default function() {
             // Last news
 
             lastNewsSlider();
+
+            // Side menu
+
+            sideMenu();
+
+            // Modals 
+
+            modals();
 
             // Rebuild to account new height
 
