@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=cyrillic" rel="stylesheet" />
+        <link rel="stylesheet" href="css/styles.min.css" />
+        <title>
+            Главная страница
+        </title>
+    </head>
+    <body class="no-touch" ontouchstart="">
+        <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+            <?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <symbol viewBox="0 0 46 46" id="down-arrow" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23 46a23 23 0 1123-23 23 23 0 01-23 23zm0-45a22 22 0 1022 22A22 22 0 0023 1z" />
+                    <path fill="currentColor" d="M23 26.7l-4.4-4.3.8-.8 3.6 3.7 3.6-3.7.8.8-4.4 4.3z" />
+                </symbol>
+            </svg>
+        </div>
+
+        <div class="page-content">
+            <div class="page-sidebar-left">
+                <div class="page-sidebar-left__logo-block">
+                    <img src="img/logo/logo-dark.svg" alt="Темное лого" class="page-sidebar-left__logo page-sidebar-left__logo--dark" />
+                    <img src="img/logo/logo-light.svg" alt="Темное лого" class="page-sidebar-left__logo page-sidebar-left__logo--light" />
+                </div>
+                <div class="page-sidebar-left__page-number">
+                    <span class="page-sidebar-left__page-number-line"></span>
+                    <span class="page-sidebar-left__page-number-digit js-page-number">
+                        01
+                    </span>
+                </div>
+            </div>
+            <div class="page-main">
+                <div class="container">
+                    <div id="fullpage">
+                        <div class="section fp-auto-height-responsive">
+                            <div class="intro">
+                                <div class="header">
+                                    <nav class="main-nav">
+                                        <ul class="main-nav__list">
+                                            <li class="main-nav__list-item active">
+                                                <a href="#" class="main-nav__link">Главная</a>
+                                            </li>
+                                            <li class="main-nav__list-item">
+                                                <a href="#" class="main-nav__link">Проекты</a>
+                                            </li>
+                                            <li class="main-nav__list-item">
+                                                <a href="#" class="main-nav__link">Услуги</a>
+                                            </li>
+                                            <li class="main-nav__list-item">
+                                                <a href="#" class="main-nav__link">Контакты</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="intro__content">
+                                    <div class="intro__text-block">
+                                        <h2 class="intro__heading">
+                                            Мы проектируем<br />
+                                            будущее
+                                        </h2>
+                                        <a href="#more" class="filled-btn js-modal-open">
+                                            Узнать подробнее
+                                        </a>
+                                    </div>
+                                    <div class="intro__image-block">
+                                        <img src="img/house.jpg" alt="Фотография с домом" class="intro__image" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section fp-auto-height-responsive">
+                            <div class="about-us js-about-us-slider">
+                                <div class="about-us__slides">
+                                    <div class="about-us__slides-item">
+                                        <div class="about-us__why-us">
+                                            <div class="about-us__why-us-text-block">
+                                                <h2 class="about-us__why-us-heading">
+                                                    Почему мы?
+                                                </h2>
+                                                <div class="about-us__why-us-text">
+                                                    <p>
+                                                        ГУП “Татинвеcтгражданпроект” является мощным инструментом для реализации основных приоритетных программ Российской Федерации и Республики Татарстан: “Доступное и комфортное жилье”,
+                                                        “Образование”, “Здравохранение”, “Универсиада 2013” и “Возрождение культурного наследия РТ”...
+                                                    </p>
+                                                </div>
+                                                <a href="#" class="about-us__why-us-link btn-not-filled">
+                                                    Читать далее
+                                                </a>
+                                            </div>
+                                            <div class="about-us__why-us-advantages">
+                                                <ul class="about-us__why-us-list">
+                                                    <li class="about-us__why-us-list-item">
+                                                        <div class="about-us__why-us-amount">
+                                                            640
+                                                        </div>
+                                                        <div class="about-us__why-us-description">
+                                                            <p>
+                                                                Штат компании
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="about-us__why-us-list-item">
+                                                        <div class="about-us__why-us-amount">
+                                                            503
+                                                        </div>
+                                                        <div class="about-us__why-us-description">
+                                                            <p>
+                                                                инженерно- технологических специалиста
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="about-us__why-us-list-item">
+                                                        <div class="about-us__why-us-amount">
+                                                            9
+                                                        </div>
+                                                        <div class="about-us__why-us-description">
+                                                            <p>
+                                                                архитектурно- планировоных мастерских
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="about-us__why-us-list-item">
+                                                        <div class="about-us__why-us-amount">
+                                                            5
+                                                        </div>
+                                                        <div class="about-us__why-us-description">
+                                                            <p>
+                                                                офисов в городах
+                                                            </p>
+                                                            <ul>
+                                                                <li>
+                                                                    Казань
+                                                                </li>
+                                                                <li>
+                                                                    Москва
+                                                                </li>
+                                                                <li>
+                                                                    Набережные Челны
+                                                                </li>
+                                                                <li>
+                                                                    Нижнекамск
+                                                                </li>
+                                                                <li>
+                                                                    Зеленодольск
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                    <li class="about-us__why-us-list-item">
+                                                        <div class="about-us__why-us-amount">
+                                                            84 года
+                                                        </div>
+                                                        <div class="about-us__why-us-description">
+                                                            <p>
+                                                                возраст компании
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="about-us__why-us-list-item">
+                                                        <div class="about-us__why-us-amount">
+                                                            720
+                                                        </div>
+                                                        <div class="about-us__why-us-description">
+                                                            <p>
+                                                                среднее колличество проектов в год
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="about-us__why-us-list-item">
+                                                        <div class="about-us__why-us-amount">
+                                                            365 экспертиз
+                                                        </div>
+                                                        <div class="about-us__why-us-description">
+                                                            <p>
+                                                                среднее колличество положительных заключений в год
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="about-us__why-us-list-item">
+                                                        <div class="about-us__why-us-amount">
+                                                            8 лет
+                                                        </div>
+                                                        <div class="about-us__why-us-description">
+                                                            <p>
+                                                                работы по системе ios 9001 : 2008
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="about-us__slides-item">
+                                        <div class="about-us__our-services">
+                                            <div class="about-us__our-services-wrapper js-tabs">
+                                                <div class="about-us__our-services-navigation">
+                                                    <h2 class="about-us__our-services-heading">
+                                                        Наши услуги
+                                                    </h2>
+                                                    <ul class="about-us__our-services-navigation-list">
+                                                        <li class="about-us__our-services-navigation-list-item">
+                                                            <a href="#" class="about-us__our-services-navigation-link js-tabs-btn">
+                                                                Инженерные изыскания
+                                                            </a>
+                                                        </li>
+                                                        <li class="about-us__our-services-navigation-list-item">
+                                                            <a href="#" class="about-us__our-services-navigation-link js-tabs-btn">
+                                                                Проектирование
+                                                            </a>
+                                                        </li>
+                                                        <li class="about-us__our-services-navigation-list-item">
+                                                            <a href="#" class="about-us__our-services-navigation-link js-tabs-btn">
+                                                                Градостроительство
+                                                            </a>
+                                                        </li>
+                                                        <li class="about-us__our-services-navigation-list-item">
+                                                            <a href="#" class="about-us__our-services-navigation-link js-tabs-btn">
+                                                                Архитектура
+                                                            </a>
+                                                        </li>
+                                                        <li class="about-us__our-services-navigation-list-item">
+                                                            <a href="#" class="about-us__our-services-navigation-link js-tabs-btn">
+                                                                Реставрация
+                                                            </a>
+                                                        </li>
+                                                        <li class="about-us__our-services-navigation-list-item">
+                                                            <a href="#" class="about-us__our-services-navigation-link js-tabs-btn">
+                                                                Строительство
+                                                            </a>
+                                                        </li>
+                                                        <li class="about-us__our-services-navigation-list-item">
+                                                            <a href="#" class="about-us__our-services-navigation-link js-tabs-btn">
+                                                                BIM технологии
+                                                            </a>
+                                                        </li>
+                                                        <li class="about-us__our-services-navigation-list-item">
+                                                            <a href="#" class="about-us__our-services-navigation-link js-tabs-btn">
+                                                                Метрополитен
+                                                            </a>
+                                                        </li>
+                                                        <li class="about-us__our-services-navigation-list-item">
+                                                            <a href="#" class="about-us__our-services-navigation-link js-tabs-btn">
+                                                                Макетирование
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="about-us__our-services-tab-items">
+                                                    <div class="about-us__our-services-tab-item js-tabs-item">
+                                                        <h3 class="about-us__our-services-tab-heading">
+                                                            Инженерные изыскания
+                                                        </h3>
+                                                        <div class="about-us__our-services-tab-content">
+                                                            <p>
+                                                                Инженерные изыскания — изучение природных условий и факторов техногенного воздействия в целях рационального и безопасного использования территорий и земельных участков, подготовки данных
+                                                                по обоснованию материалов, необходимых для территориального планирования, планировки территории и архитектурно-строительного проектирования.
+                                                            </p>
+                                                            <img src="img/workers.jpg" alt="Рабочие" />
+                                                            <p>
+                                                                Выполняется полный комплекс инженерно-геологических изыскания для нового строительства, реконструкции, капитального ремонта зданий и сооружений и подготовки документации по планировке
+                                                                территории:
+                                                            </p>
+                                                        </div>
+                                                        <a href="#" class="about-us__our-services-read-more btn-not-filled">Читать далее</a>
+                                                    </div>
+                                                    <div class="about-us__our-services-tab-item js-tabs-item">
+                                                        <h3 class="about-us__our-services-tab-heading">
+                                                            Проектирование
+                                                        </h3>
+                                                        <div class="about-us__our-services-tab-content">
+                                                            <p>
+                                                                Инженерные изыскания — изучение природных условий и факторов техногенного воздействия в целях рационального и безопасного использования территорий и земельных участков, подготовки данных
+                                                                по обоснованию материалов, необходимых для территориального планирования, планировки территории и архитектурно-строительного проектирования.
+                                                            </p>
+                                                        </div>
+                                                        <a href="#" class="about-us__our-services-read-more btn-not-filled">Читать далее</a>
+                                                    </div>
+                                                    <div class="about-us__our-services-tab-item js-tabs-item">
+                                                        <h3 class="about-us__our-services-tab-heading">
+                                                            Градостроительство
+                                                        </h3>
+                                                        <div class="about-us__our-services-tab-content">
+                                                            <p>
+                                                                Инженерные изыскания — изучение природных условий и факторов техногенного воздействия в целях рационального и безопасного использования территорий и земельных участков, подготовки данных
+                                                                по обоснованию материалов, необходимых для территориального планирования, планировки территории и архитектурно-строительного проектирования.
+                                                            </p>
+                                                        </div>
+                                                        <a href="#" class="about-us__our-services-read-more btn-not-filled">Читать далее</a>
+                                                    </div>
+                                                    <div class="about-us__our-services-tab-item js-tabs-item">
+                                                        <h3 class="about-us__our-services-tab-heading">
+                                                            Архитектура
+                                                        </h3>
+                                                        <div class="about-us__our-services-tab-content">
+                                                            <p>
+                                                                Инженерные изыскания — изучение природных условий и факторов техногенного воздействия в целях рационального и безопасного использования территорий и земельных участков, подготовки данных
+                                                                по обоснованию материалов, необходимых для территориального планирования, планировки территории и архитектурно-строительного проектирования.
+                                                            </p>
+                                                        </div>
+                                                        <a href="#" class="about-us__our-services-read-more btn-not-filled">Читать далее</a>
+                                                    </div>
+                                                    <div class="about-us__our-services-tab-item js-tabs-item">
+                                                        <h3 class="about-us__our-services-tab-heading">
+                                                            Реставрация
+                                                        </h3>
+                                                        <div class="about-us__our-services-tab-content">
+                                                            <p>
+                                                                Инженерные изыскания — изучение природных условий и факторов техногенного воздействия в целях рационального и безопасного использования территорий и земельных участков, подготовки данных
+                                                                по обоснованию материалов, необходимых для территориального планирования, планировки территории и архитектурно-строительного проектирования.
+                                                            </p>
+                                                        </div>
+                                                        <a href="#" class="about-us__our-services-read-more btn-not-filled">Читать далее</a>
+                                                    </div>
+                                                    <div class="about-us__our-services-tab-item js-tabs-item">
+                                                        <h3 class="about-us__our-services-tab-heading">
+                                                            Строительство
+                                                        </h3>
+                                                        <div class="about-us__our-services-tab-content">
+                                                            <p>
+                                                                Инженерные изыскания — изучение природных условий и факторов техногенного воздействия в целях рационального и безопасного использования территорий и земельных участков, подготовки данных
+                                                                по обоснованию материалов, необходимых для территориального планирования, планировки территории и архитектурно-строительного проектирования.
+                                                            </p>
+                                                        </div>
+                                                        <a href="#" class="about-us__our-services-read-more btn-not-filled">Читать далее</a>
+                                                    </div>
+                                                    <div class="about-us__our-services-tab-item js-tabs-item">
+                                                        <h3 class="about-us__our-services-tab-heading">
+                                                            BIM технологии
+                                                        </h3>
+                                                        <div class="about-us__our-services-tab-content">
+                                                            <p>
+                                                                Инженерные изыскания — изучение природных условий и факторов техногенного воздействия в целях рационального и безопасного использования территорий и земельных участков, подготовки данных
+                                                                по обоснованию материалов, необходимых для территориального планирования, планировки территории и архитектурно-строительного проектирования.
+                                                            </p>
+                                                        </div>
+                                                        <a href="#" class="about-us__our-services-read-more btn-not-filled">Читать далее</a>
+                                                    </div>
+                                                    <div class="about-us__our-services-tab-item js-tabs-item">
+                                                        <h3 class="about-us__our-services-tab-heading">
+                                                            Метрополитен
+                                                        </h3>
+                                                        <div class="about-us__our-services-tab-content">
+                                                            <p>
+                                                                Инженерные изыскания — изучение природных условий и факторов техногенного воздействия в целях рационального и безопасного использования территорий и земельных участков, подготовки данных
+                                                                по обоснованию материалов, необходимых для территориального планирования, планировки территории и архитектурно-строительного проектирования.
+                                                            </p>
+                                                        </div>
+                                                        <a href="#" class="about-us__our-services-read-more btn-not-filled">Читать далее</a>
+                                                    </div>
+                                                    <div class="about-us__our-services-tab-item js-tabs-item">
+                                                        <h3 class="about-us__our-services-tab-heading">
+                                                            Макетирование
+                                                        </h3>
+                                                        <div class="about-us__our-services-tab-content">
+                                                            <p>
+                                                                Инженерные изыскания — изучение природных условий и факторов техногенного воздействия в целях рационального и безопасного использования территорий и земельных участков, подготовки данных
+                                                                по обоснованию материалов, необходимых для территориального планирования, планировки территории и архитектурно-строительного проектирования.
+                                                            </p>
+                                                        </div>
+                                                        <a href="#" class="about-us__our-services-read-more btn-not-filled">Читать далее</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="about-us__slides-item">
+                                        Наши работы
+                                    </div>
+                                </div>
+                                <div class="about-us__navigation">
+                                    <div class="about-us__navigation-bars">
+                                        <div class="about-us__navigation-bar">
+                                            <div class="about-us__navigation-bar-inner"></div>
+                                        </div>
+                                        <div class="about-us__navigation-bar">
+                                            <div class="about-us__navigation-bar-inner"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="about-us__navigation-links">
+                                        <a href="#" class="about-us__navigation-link">
+                                            Почему мы
+                                        </a>
+                                        <a href="#" class="about-us__navigation-link">
+                                            Наши услуги
+                                        </a>
+                                        <a href="#" class="about-us__navigation-link">
+                                            Наши работы
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section fp-auto-height-responsive">
+                            Секция 3
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-sidebar-right">
+                <button class="page-sidebar-right__burger js-sidebar-menu">
+                    <span class="page-sidebar-right__burger-content">
+                        <span></span>
+                        <span></span>
+                    </span>
+                    <span class="page-sidebar-right__burger-text">
+                        Меню
+                    </span>
+                </button>
+                <div class="page-sidebar-right__menu">
+                    <div class="page-sidebar-right__menu-content"></div>
+                    <a href="#" class="page-sidebar-right__menu-click-btn">
+                        <span class="page-sidebar-right__menu-click-btn-text">
+                            Смотреть дальше
+                        </span>
+                    </a>
+                </div>
+                <button class="page-sidebar-right__arrow js-fullpage-arrow">
+                    <svg width="46" height="46" aria-hidden="true" class="icon-arrow">
+                        <use xlink:href="#down-arrow" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="misc/vendor/js/scrolloverflow.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+.main-nav {
+    width: 100%;
+}
+
+
+.main-nav__list {
+    display: flex;
+}
+
+
+.main-nav__list-item {
+    width: 25%;
+
+}
+
+
+
+.main-nav__link {
+    color: black;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: .13em;
+    display: block;
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid #BCBBBC;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: -1.5px;
+        height: 2px;
+        background-color: $primary-color;
+        opacity: 0;
+        transition: opacity .2s;
+        pointer-events: none;
+    }
+
+    .no-touch &:hover,
+    .touch &:active,
+    .main-nav__list-item.active & {
+        &::after {
+            opacity: 1;
+        }
+    }
+    &:link,
+    &:visited {
+        color: black;
+    }
+}

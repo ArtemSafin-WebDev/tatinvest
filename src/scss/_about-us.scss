@@ -1,0 +1,325 @@
+.about-us {
+    @include fullpageSection();
+    background-color: $darkest;
+    color: white;
+    padding-right: $left-padding;
+}
+
+.about-us__navigation {
+    margin-bottom: 6rem;
+}
+
+.about-us__navigation-links {
+    display: flex;
+}
+
+.about-us__navigation-link {
+    width: 33.33%;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    font-weight: 600;
+    text-transform: lowercase;
+    position: relative;
+    transition: color 0.2s;
+    &:link,
+    &:visited {
+        color: #2b292c;
+    }
+
+    &:first-child {
+        text-align: left;
+        left: -4rem;
+    }
+    &:last-child {
+        text-align: right;
+        right: -4rem;
+    }
+
+    .no-touch &:hover,
+    .touch &:active,
+    &.active {
+        color: #89888a;
+    }
+}
+
+.about-us__navigation-bars {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.about-us__navigation-bar {
+    width: 50%;
+    height: 1px;
+    background-color: #2b292c;
+    position: relative;
+}
+
+.about-us__navigation-bar-inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $primary-color;
+    transform-origin: left center;
+    transform: scaleX(0);
+    transition-property: transform;
+    transition-timing-function: linear;
+}
+
+.about-us__slides {
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us__slides-item {
+    min-height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s, visibility 0.5s;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    &.active {
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        z-index: 2;
+    }
+}
+
+.about-us__why-us {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.about-us__why-us-text-block {
+    width: 28rem;
+}
+
+.about-us__why-us-heading {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 400;
+    &::after {
+        content: '';
+        width: 11.5rem;
+        height: 3px;
+        background-color: $primary-color;
+        display: block;
+        margin-top: 0.5rem;
+    }
+}
+
+.about-us__why-us-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.6rem;
+    line-height: 1.7;
+    margin-top: 3rem;
+}
+
+.about-us__why-us-link {
+    margin-top: 4rem;
+}
+
+.about-us__why-us-advantages {
+    width: 50%;
+    flex-grow: 1;
+    margin-left: 20rem;
+}
+
+.about-us__why-us-list {
+    counter-reset: why-us;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -2.5rem;
+}
+
+.about-us__why-us-list-item {
+    counter-increment: why-us;
+    width: 25%;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    &::before {
+        content: '№' counter(why-us);
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 1.6rem;
+        line-height: 1.4;
+    }
+}
+
+.about-us__why-us-amount {
+    font-size: 2rem;
+    line-height: 1.4;
+    color: white;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    &::after {
+        content: '';
+        border-style: solid;
+        border-width: 4px 0 4px 4px;
+        border-color: transparent transparent transparent #ffffff;
+        display: block;
+        margin-left: auto;
+    }
+}
+
+.about-us__why-us-description {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: white;
+    margin-top: 1rem;
+
+    ul {
+        li {
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                right: 100%;
+                margin-right: 0.6rem;
+                top: 0.84rem;
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.3);
+            }
+        }
+    }
+}
+
+.about-us__our-services {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-us__our-services-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.about-us__our-services-heading {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 400;
+    &::after {
+        content: '';
+        width: 11.5rem;
+        height: 3px;
+        background-color: $primary-color;
+        display: block;
+        margin-top: 1rem;
+    }
+}
+
+.about-us__our-services-navigation {
+    width: 32rem;
+    
+}
+
+.about-us__our-services-navigation-list {
+    margin-top: 4rem;
+}
+
+.about-us__our-services-navigation-list-item {
+    margin-bottom: 2rem;
+}
+
+.about-us__our-services-navigation-link {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-family: $playfair;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+    &.active {
+        font-size: 2.5rem;
+        color: white;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: white;
+    }
+}
+
+.about-us__our-services-tab-items {
+    position: relative;
+    width: 68.6rem;
+    margin-left: auto;
+}
+
+.about-us__our-services-tab-item {
+    min-height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s, visibility 0.5s;
+    z-index: 1;
+    
+    flex-grow: 1;
+    &.active {
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        z-index: 2;
+    }
+}
+
+
+.about-us__our-services-tab-heading {
+    font-size: 3rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    font-weight: 700;
+    font-family: $playfair;
+}
+
+
+
+.about-us__our-services-tab-content {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.6rem;
+    line-height: 1.7;
+    margin-top: 3rem;
+    p {
+        margin-bottom: 2rem;
+    }
+
+    img {
+        display: block;
+        max-width: 24rem;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+.about-us__our-services-read-more {
+    margin-top: 2rem;
+}

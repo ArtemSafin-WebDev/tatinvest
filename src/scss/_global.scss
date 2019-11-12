@@ -1,0 +1,86 @@
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+body {
+    min-width: 320px;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: $sf;
+    color: $darkest;
+}
+
+ul {
+    list-style: none;
+}
+
+ol {
+    counter-reset: ordered-list;
+    li {
+        counter-increment: ordered-list;
+        &::before {
+            content: counter(ordered-list) '.';
+        }
+    }
+}
+
+input,
+textarea {
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 0;
+    font: inherit;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    box-shadow: none;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    -webkit-appearance: none;
+    font: inherit;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    
+    max-width: 100%;
+    vertical-align: top;
+}
+
+.visually-hidden {
+    @include visuallyHidden();
+}
+
+.swiper-slide {
+    box-sizing: border-box;
+    height: auto;
+}
+
+::selection {
+    color: white;
+    background-color: $primary-color;
+}

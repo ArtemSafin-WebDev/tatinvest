@@ -1,0 +1,42 @@
+.intro {
+    @include fullpageSection();
+}
+
+.intro__content {
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    
+}
+
+.intro__text-block {
+    align-self: center;
+}
+
+.intro__heading {
+    font-size: 6rem;
+    line-height: 1.7;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: $playfair;
+}
+
+
+.intro__image-block {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 90%;
+    z-index: -1;
+}
+
+
+
+.intro__image {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    display: block;
+    @include objectFitCover();
+}
