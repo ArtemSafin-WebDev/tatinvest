@@ -1,0 +1,237 @@
+.last-news {
+    @include fullpageSection();
+
+    padding-right: $left-padding;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.last-news__top-row {
+    display: flex;
+    align-items: center;
+}
+
+.last-news__heading {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 400;
+    &::after {
+        content: '';
+        width: 11.5rem;
+        height: 3px;
+        background-color: $primary-color;
+        display: block;
+        margin-top: 1rem;
+    }
+}
+
+.last-news__show-all {
+    margin-left: auto;
+}
+
+.last-news__others-card {
+    display: flex;
+}
+
+.last-news__bottom-row {
+    display: flex;
+    margin-top: 6rem;
+
+    counter-reset: last-news;
+}
+
+.last-news__slider {
+    width: 65%;
+    counter-increment: last-news;
+    position: relative;
+}
+
+.last-news__others {
+    width: 35%;
+    padding-left: 5rem;
+}
+
+.last-news__others-heading {
+    font-weight: 400;
+    font-size: 1.2rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: $darkest;
+    .date {
+        color: #b9b8b9;
+    }
+}
+
+.last-news__others-list {
+    margin-top: 1.5rem;
+}
+
+.last-news__others-list-item {
+    border-bottom: 1px solid #ececec;
+    counter-increment: last-news;
+    &:first-child {
+        border-top: 1px solid #ececec;
+    }
+}
+
+.last-news__others-card {
+    display: flex;
+    padding-top: 4.4rem;
+    padding-bottom: 2rem;
+    &::after {
+        content: counter(last-news);
+        font-size: 7.2rem;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        color: #f7f7f7;
+        line-height: 1;
+    }
+    &:link,
+    &:visited {
+        color: #404040;
+    }
+}
+
+.last-news__others-card-image-container {
+    width: 10rem;
+    height: 10rem;
+    flex-shrink: 0;
+    margin-right: 3rem;
+}
+
+.last-news__others-card-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    @include objectFitCover();
+}
+
+.last-news__others-card-info {
+    width: 30%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.last-news__others-card-title {
+    font-family: $playfair;
+    font-size: 2rem;
+    line-height: 1.4;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.last-news__others-card-date {
+    letter-spacing: 0.13em;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: $darkest;
+}
+
+.last-news__others-card-date {
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: $darkest;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-top: auto;
+    .date {
+        color: #b9b8b9;
+    }
+}
+
+.last-news__slider-card {
+    padding-bottom: 60%;
+    position: relative;
+    
+    display: block;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(black, .5);
+    }
+}
+
+
+.last-news__slider-card-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 3;
+    width: 80%;
+}
+
+.last-news__slider-card-image {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include objectFitCover();
+}
+
+.last-news__slider-card-title {
+    font-size: 3.6rem;
+    line-height: 1.7;
+    font-weight: 700;
+    font-family: $playfair;
+    color: white;
+}
+
+.last-news__slider-card-date {
+    font-size: 1.2rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 3rem;
+    .date {
+        color: rgba(white, 0.5);
+    }
+}
+
+
+
+.last-news__slider-arrow-btn {
+    width: 4.6rem;
+    height: 4.6rem;
+    border-radius: 50%;
+    border: 1px solid rgba(white, .5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    margin-top: -2.3rem;
+    transition: border-color .2s;
+    outline: none;
+    svg {
+        width: .5rem;
+        height: 1rem;
+        fill: white;
+    }
+
+
+    .no-touch &:hover,
+    .touch &:active {
+        border-color: white;
+    }
+
+    &--prev {
+        left: 3.8rem;
+    }
+    &--next {
+        right: 3.8rem;
+    }
+}

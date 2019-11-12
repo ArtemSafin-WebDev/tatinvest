@@ -2,6 +2,7 @@ import Fullpage from 'fullpage.js';
 import aboutUsSlider from './aboutUsSlider';
 import tabs from './tabs';
 import projectsSlider from './projectsSlider';
+import lastNewsSlider from './lastNewsSlider';
 
 export default function() {
     let lastSection = false;
@@ -67,6 +68,10 @@ export default function() {
             // Projects slider
 
             projectsSlider();
+
+            // Last news
+
+            lastNewsSlider();
 
             // Rebuild to account new height
 

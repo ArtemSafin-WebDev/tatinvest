@@ -1,0 +1,87 @@
+.last-projects {
+    @include fullpageSection();
+    background-color: $darkest;
+    color: white;
+    padding-right: $left-padding;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.last-projects__heading {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 400;
+    &::after {
+        content: '';
+        width: 11.5rem;
+        height: 3px;
+        background-color: $primary-color;
+        display: block;
+        margin-top: 1rem;
+    }
+}
+
+.last-projects__top-row {
+    display: flex;
+    align-items: center;
+}
+
+
+.last-projects__bottom-row {
+    margin-top: 7rem;
+}
+
+
+.last-projects__list {
+    display: flex;
+    margin: 0 -4rem;
+}
+
+
+.last-projects__list-item {
+    padding: 0 4rem;
+    width: 33.33%;
+}
+
+.last-projects__read-more-btn {
+    margin-left: auto;
+}
+
+.last-projects__card {
+    display: flex;
+    align-items: center;
+    &:link,
+    &:visited {
+        color: white;
+    }
+}
+
+.last-projects__card-image-container {
+    width: 19rem;
+    height: 19rem;
+    flex-shrink: 0;
+    margin-right: 3rem;
+}
+
+.last-projects__card-info {
+    width: 50%;
+    flex-grow: 1;
+}
+
+.last-projects__card-title {
+    font-size: 2rem;
+    line-height: 1.4;
+    font-weight: 700;
+    font-family: $playfair;
+}
+
+.last-projects__card-date {
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.3);
+    margin-top: 2.5rem;
+}

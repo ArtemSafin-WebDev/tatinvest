@@ -60,6 +60,14 @@ export default function() {
             });
         });
 
+        slider.addEventListener('click', function() {
+            clearTimeout(timer);
+            bars.forEach((bar, barIndex) => {
+                bar.style.cssText = '';
+            });
+            autoplay = false;
+        })
+
         handleLinkClick(activeIndex);
     });
 }

@@ -47,3 +47,27 @@
         border-color: white;
     }
 }
+
+
+
+.btn-not-filled-dark {
+    color: rgba(black, 0.7);
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    display: inline-block;
+    padding: .8rem 2rem;
+    border: 1px solid rgba(black, .15);
+    transition: border-color .2s, color .2s;
+    &:link,
+    &:visited {
+        color: rgba(black, 0.7);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: #1F1D21;
+        border-color: #1F1D21;
+    }
+}
