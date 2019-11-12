@@ -29,8 +29,10 @@ export default function() {
             });
 
             if (autoplay && bars[activeIndex]) {
-                bars[activeIndex].style.transform = 'scaleX(1)';
-                bars[activeIndex].style.transitionDuration = `${5000 / 1000}s`;
+                setTimeout(function() {
+                    bars[activeIndex].style.transform = 'scaleX(1)';
+                    bars[activeIndex].style.transitionDuration = `${5000 / 1000}s`;
+                }, 200);
             }
 
             if (timer) {

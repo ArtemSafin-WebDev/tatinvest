@@ -65,6 +65,7 @@
     transform-origin: left center;
     transform: scaleX(0);
     transition-property: transform;
+    
     transition-timing-function: linear;
 }
 
@@ -119,7 +120,7 @@
         height: 3px;
         background-color: $primary-color;
         display: block;
-        margin-top: 0.5rem;
+        margin-top: 1rem;
     }
 }
 
@@ -322,4 +323,186 @@
 
 .about-us__our-services-read-more {
     margin-top: 2rem;
+}
+
+
+.about-us__our-projects {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+
+.about-us__our-projects-navigation {
+    width: 42rem;
+    margin-right: auto;
+}
+
+
+.about-us__our-projects-list-item {
+    margin-bottom: 1rem;
+}
+
+
+.about-us__our-projects-heading {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 400;
+    &::after {
+        content: '';
+        width: 11.5rem;
+        height: 3px;
+        background-color: $primary-color;
+        display: block;
+        margin-top: 1rem;
+    }
+}
+
+
+
+.about-us__our-projects-list {
+    margin-top: 4rem;
+}
+
+
+.about-us__our-projects-link {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-family: $playfair;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color .2s;
+    &:link,
+    &:visited {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: white;
+    }
+
+    &.active {
+        font-size: 2rem;
+        color: white;
+    }
+}
+
+
+
+.about-us__our-projects-tab-items {
+    position: relative;
+    width: 74rem;
+}
+
+
+.about-us__our-projects-tab-item {
+    min-height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s, visibility 0.5s;
+    z-index: 1;
+    flex-grow: 1;
+    display: flex;
+    
+    width: 100%;
+    padding-top: 8rem;
+    &.active {
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        z-index: 2;
+    }
+}
+
+.about-us__our-projects-images {
+    width: 39rem;
+    flex-shrink: 0;
+}
+
+.about-us__our-projects-image-card {
+    padding-left: 8rem;
+    padding-bottom: 8rem;
+    padding-top: .8rem;
+}
+
+.about-us__our-projects-image {
+    width: 100%;
+    display: block;
+    height: auto;
+    box-shadow: -8rem 8rem 0 #1F1D21;
+}
+
+.about-us__our-projects-main-info {
+    width: 28rem;
+    margin-left: auto;
+}
+
+
+.about-us__our-projects-card-heading {
+    font-size: 2rem;
+    line-height: 1.4;
+    font-family: $playfair;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+
+.about-us__our-projects-card-content {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    p {
+        margin-bottom: 1.5rem;
+    }
+}
+
+
+.about-us__our-projects-main-slider-arrows {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+
+.about-us__our-projects-main-slider-arrow {
+    display: block;
+    outline: none;
+    &.swiper-button-disabled {
+        cursor: default;
+        > svg {
+            fill: rgba(255, 255, 255, 0.3) !important;
+        }
+    }
+    .no-touch &:hover,
+    .touch &:active {
+        > svg {
+            fill: white;
+        }
+    }
+    > svg {
+        fill: rgba(255, 255, 255, 0.3);
+        transition: fill .2s;
+        display: block;
+        width: 0.8rem;
+        height: 1.6rem;
+    }
+    &:nth-child(1) {
+        margin-right: 1.5rem;
+    }
+    &:nth-child(2) {
+        margin-left: 1.5rem;
+    }
+}
+
+
+
+.about-us__our-projects-read-more-btn {
+    margin-top: 4.5rem;
 }

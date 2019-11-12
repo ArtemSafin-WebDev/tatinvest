@@ -1,9 +1,9 @@
 import Fullpage from 'fullpage.js';
 import aboutUsSlider from './aboutUsSlider';
 import tabs from './tabs';
+import projectsSlider from './projectsSlider';
 
 export default function() {
-
     let lastSection = false;
     let firstSection = false;
     let fullpageSlider = null;
@@ -11,7 +11,6 @@ export default function() {
     const pageNumber = document.querySelector('.js-page-number');
 
     const slideChangeHandler = (origin, destination, direction) => {
-
         // Make elements dark
 
         if (!!(destination.index % 2)) {
@@ -35,14 +34,12 @@ export default function() {
             document.body.classList.remove('last-section');
         }
 
-
         // Change page number
 
-        const number = destination.index + 1
+        const number = destination.index + 1;
 
         pageNumber.textContent = number.toString().length < 2 ? '0' + number : number;
-
-    }
+    };
 
     fullpageSlider = new Fullpage('#fullpage', {
         responsiveWidth: 768,
@@ -67,11 +64,15 @@ export default function() {
 
             tabs();
 
+            // Projects slider
+
+            projectsSlider();
+
             // Rebuild to account new height
 
             fullpageSlider.reBuild();
         },
         afterLoad: slideChangeHandler,
         onLeave: slideChangeHandler
-    })
+    });
 }
