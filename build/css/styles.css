@@ -1184,7 +1184,7 @@ img {
   @media only screen and (max-width: 768px) {
     .intro__content {
       flex-direction: column;
-      margin-top: 3rem; } }
+      margin-top: 7rem; } }
 
 .intro__text-block {
   align-self: center; }
