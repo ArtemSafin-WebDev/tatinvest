@@ -1,14 +1,23 @@
+.container {
+    @include breakpoint(mobile) {
+        width: 100%;
+        padding: 0 1.6rem;
+    }
+}
+
+
+
 .page-content {
     overflow: hidden;
     display: flex;
-    // background-color: red;
+    
     flex-grow: 1;
 }
 
 .page-main {
     width: 50%;
     flex-grow: 1;
-    // background-color: green;
+    
 }
 
 .page-sidebar-right,
@@ -305,4 +314,11 @@
     min-height: 100%;
     display: flex;
     flex-direction: column;
+}
+
+
+
+
+.fp-responsive .fullpage-wrapper {
+    transform: initial !important;
 }

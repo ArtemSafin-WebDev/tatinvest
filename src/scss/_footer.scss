@@ -3,18 +3,35 @@
     padding-bottom: 9rem;
     margin-top: auto;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    @include breakpoint(mobile) {
+        border: none;
+        margin-top: 6rem;
+        padding: 6rem 0;
+    }
 }
 
 
 .footer__list {
     display: flex;
     margin: 0 -2rem;
+    @include breakpoint(mobile) {
+        margin: 0;
+        flex-direction: column;
+    }
 }
 
 
 .footer__list-item {
     width: 25%;
     padding: 0 2rem;
+    @include breakpoint(mobile) {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 3rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 
@@ -25,6 +42,9 @@
    
     display: block;
     text-decoration: underline;
+    @include breakpoint(mobile) {
+        text-align: center;
+    }
     &:link,
     &:visited {
         color: white;

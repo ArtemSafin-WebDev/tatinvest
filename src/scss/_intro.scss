@@ -1,16 +1,27 @@
 .intro {
     @include fullpageSection();
+
+    
 }
 
 .intro__content {
     flex-grow: 1;
     position: relative;
     display: flex;
-    
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        margin-top: 3rem;
+        
+    }
 }
 
 .intro__text-block {
     align-self: center;
+    @include breakpoint(mobile) {
+        align-self: stretch;
+        position: relative;
+        z-index: 2;
+    }
 }
 
 .intro__heading {
@@ -20,8 +31,19 @@
     text-transform: uppercase;
     font-weight: 700;
     font-family: $playfair;
+    @include breakpoint(mobile) {
+        font-size: 2.5rem;
+        padding-right: 6rem;
+    }
 }
 
+
+.intro__more-btn {
+    margin-top: 6rem;
+    @include breakpoint(mobile) {
+        margin-top: 2rem;
+    }
+}
 
 .intro__image-block {
     position: absolute;
@@ -29,6 +51,13 @@
     right: 0;
     height: 90%;
     z-index: -1;
+    @include breakpoint(mobile) {
+        height: auto;
+        z-index: 1;
+        position: relative;
+        margin-left: -1.6rem;
+        margin-top: -9.4rem;
+    }
 }
 
 
@@ -39,4 +68,76 @@
     max-width: 100%;
     display: block;
     @include objectFitCover();
+
+    @include breakpoint(mobile) {
+        height: auto;
+        width: 100%;
+    }
+}
+
+
+
+.intro__page-number {
+    display: none;
+    width: 70%;
+    
+    align-items: center;
+    margin-top: 1.5rem;
+    .line {
+        width: 50%;
+        flex-grow: 1;
+        background-color: rgba(0, 0, 0, 0.3);
+        height: 1px;
+        margin-top: .4rem;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            height: 100%;
+            top: 0;
+            width: 40%;
+            background-color: $primary-color;
+            transform: scaleY(2);
+        }
+    }
+    .number {
+        font-size: 1.5rem;
+        font-family: $playfair;
+        color: black;
+        margin-left: 1.5rem;
+    }
+    @include breakpoint(mobile) {
+        display: flex;
+    }
+}
+
+
+.intro__page-circle {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 4.6rem;
+    height: 4.6rem;
+    border: 1px solid rgba(20, 18, 21, 0.3);
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    margin-top: -2.3rem;
+    right: 0;
+    z-index: 200;
+    
+   
+    > svg {
+        fill: $darkest;
+        width: .65rem;
+        height: 1.3rem;
+        transform: rotate(-90deg);
+    }
+    @include breakpoint(mobile) {
+        display: flex;
+      
+    }
 }

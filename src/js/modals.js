@@ -1,3 +1,5 @@
+
+
 export default function() {
     const modalLinks = Array.from(document.querySelectorAll('.js-modal-open'));
     const modalCloseLinks = Array.from(document.querySelectorAll('.js-modal-close'));

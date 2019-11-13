@@ -13,6 +13,11 @@ export default function() {
             navigation: {
                 nextEl: slider.querySelector('.last-news__slider-arrow-btn--next'),
                 prevEl: slider.querySelector('.last-news__slider-arrow-btn--prev')
+            },
+            pagination: {
+                el: slider.querySelector('.last-news__slider-pagination'),
+                type: 'bullets',
+                clickable: true
             }
         })
     })

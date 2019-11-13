@@ -5,6 +5,8 @@ import projectsSlider from './projectsSlider';
 import lastNewsSlider from './lastNewsSlider';
 import sideMenu from './sideMenu';
 import modals from './modals';
+import burgerMenu from './burgerMenu';
+import smoothScrolling from './smoothScrolling';
 
 export default function() {
     let lastSection = false;
@@ -45,7 +47,7 @@ export default function() {
     };
 
     fullpageSlider = new Fullpage('#fullpage', {
-        responsiveWidth: 768,
+        responsiveWidth: 769,
         scrollOverflow: true,
         afterRender: function() {
             const arrow = document.querySelector('.js-fullpage-arrow');
@@ -82,6 +84,14 @@ export default function() {
             // Modals 
 
             modals();
+
+            // Burger menu
+
+            burgerMenu();
+
+            // Smooth scrolling
+
+            smoothScrolling();
 
             // Rebuild to account new height
 

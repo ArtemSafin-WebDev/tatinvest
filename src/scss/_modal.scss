@@ -24,6 +24,9 @@
     max-height: 100%;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    @include breakpoint(mobile) {
+        height: 100%;
+    }
 }
 
 .apply-modal {
@@ -32,16 +35,36 @@
     min-height: 44rem;
     max-width: 72rem;
     position: relative;
+    @include breakpoint(mobile) {
+        min-height: none;
+        max-width: none;
+        min-height: 100%;
+    }
 }
 
 .apply-modal__left-column,
 .apply-modal__right-column {
     width: 50%;
     position: relative;
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+}
+
+
+.apply-modal__left-column {
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .apply-modal__right-column {
     padding: 6rem;
+    @include breakpoint(mobile) {
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .apply-modal__image {
@@ -75,8 +98,20 @@
     font-family: $proxima;
     color: $darkest;
     padding: 1.2rem 2rem;
+    padding-top: 1.4rem;
     @include placeholder {
         color: $darkest;
+    }
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        padding-top: 1.6rem;
+    }
+}
+
+
+.apply-modal__form-block {
+    @include breakpoint(mobile) {
+        margin: auto 0;
     }
 }
 

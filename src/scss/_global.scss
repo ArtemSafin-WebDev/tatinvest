@@ -10,6 +10,27 @@
 html {
     box-sizing: border-box;
     font-size: 10px;
+
+    @include breakpoint(large-desktop) {
+        font-size: 8px;
+    }
+
+
+    @include breakpoint(tablet) {
+        font-size: 7px;
+    }
+
+    @include breakpoint(small-tablet) {
+        font-size: 6px;
+    }
+
+
+    @include breakpoint(mobile) {
+        font-size: 10px;
+    }
+    @include breakpoint(supersmall-mobile) {
+        font-size: 8px;
+    }
 }
 
 body {

@@ -62,6 +62,12 @@
     padding-left: $left-padding;
     display: flex;
     flex-direction: column;
+    @include breakpoint(desktop) {
+        padding-left: $left-padding-mobile;
+    }
+    @include breakpoint(mobile) {
+        padding-left: 0;
+    }
 }
 
 @mixin breakpoint($class) {

@@ -3,10 +3,34 @@
     background-color: $darkest;
     color: white;
     padding-right: $left-padding;
+    @include breakpoint(desktop) {
+        padding-right: $left-padding-mobile;
+    }
+    @include breakpoint(mobile) {
+        padding: 0;
+        background-color: transparent;
+        // padding: 0 1rem;
+        padding-top: 6rem;
+        margin-top: 4rem;
+        &::before {
+            content: '';
+            position: absolute;
+            left: calc((100vw - 100%) / 2 * -1);
+            width: 100vw;
+            top: 0;
+            bottom: 0;
+            background-color: $darkest;
+            z-index: -1;
+        }
+    }
 }
 
 .about-us__navigation {
     margin-bottom: 6rem;
+    @include breakpoint(mobile) {
+        // margin-bottom: 0;
+        margin-top: 6rem;
+    }
 }
 
 .about-us__navigation-links {
@@ -22,6 +46,11 @@
     text-transform: lowercase;
     position: relative;
     transition: color 0.2s;
+    @include breakpoint(mobile) {
+        position: static;
+        font-size: 1.4rem;
+        font-weight: 40;
+    }
     &:link,
     &:visited {
         color: #2b292c;
@@ -30,6 +59,7 @@
     &:first-child {
         text-align: left;
         left: -4rem;
+        
     }
     &:last-child {
         text-align: right;
@@ -53,6 +83,9 @@
     height: 1px;
     background-color: #2b292c;
     position: relative;
+    @include breakpoint(mobile) {
+        height: 2px;
+    }
 }
 
 .about-us__navigation-bar-inner {
@@ -101,10 +134,16 @@
     flex-grow: 1;
     display: flex;
     align-items: center;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+    }
 }
 
 .about-us__why-us-text-block {
     width: 28rem;
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
 }
 
 .about-us__why-us-heading {
@@ -114,6 +153,10 @@
     text-transform: uppercase;
     color: white;
     font-weight: 400;
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
     &::after {
         content: '';
         width: 11.5rem;
@@ -121,6 +164,9 @@
         background-color: $primary-color;
         display: block;
         margin-top: 1rem;
+        @include breakpoint(mobile) {
+            margin-top: .5rem;
+        }
     }
 }
 
@@ -133,12 +179,23 @@
 
 .about-us__why-us-link {
     margin-top: 4rem;
+    @include breakpoint(mobile) {
+        margin-top: 2rem;
+    }
 }
 
 .about-us__why-us-advantages {
     width: 50%;
     flex-grow: 1;
     margin-left: 20rem;
+    @include breakpoint(desktop) {
+        margin-left: 15rem;
+    }
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 6rem;
+    }
 }
 
 .about-us__why-us-list {
@@ -146,6 +203,12 @@
     display: flex;
     flex-wrap: wrap;
     margin: -2.5rem;
+    // @include breakpoint(desktop) {
+    //     margin: -1rem;
+    // }
+    @include breakpoint(mobile) {
+        margin: 0;
+    }
 }
 
 .about-us__why-us-list-item {
@@ -154,11 +217,36 @@
     padding: 2.5rem;
     display: flex;
     flex-direction: column;
+    // @include breakpoint(desktop) {
+    //     padding: 1rem;
+    // }
+    @include breakpoint(mobile) {
+        width: 100%;  
+        padding: 0;
+        &:nth-child(even) {
+            align-items: flex-end;
+        }
+        &:nth-child(odd) {
+            align-items: flex-start;
+        }
+    }
+    
+}
+
+
+.about-us__why-us-card {
+    
+    @include breakpoint(mobile) {
+        width: 50%;
+    }
     &::before {
         content: '№' counter(why-us);
         color: rgba(255, 255, 255, 0.3);
         font-size: 1.6rem;
         line-height: 1.4;
+        @include breakpoint(mobile) {
+            font-weight: 600;
+        }
     }
 }
 
@@ -169,6 +257,9 @@
     margin-top: 1rem;
     display: flex;
     align-items: center;
+    @include breakpoint(mobile) {
+        font-weight: 600;
+    }
     &::after {
         content: '';
         border-style: solid;
@@ -176,6 +267,9 @@
         border-color: transparent transparent transparent #ffffff;
         display: block;
         margin-left: auto;
+        @include breakpoint(mobile) {
+            border-width: 6px 0 6px 6px;
+        }
     }
 }
 
@@ -213,6 +307,11 @@
 .about-us__our-services-wrapper {
     display: flex;
     align-items: center;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: stretch;
+        
+    }
 }
 
 .about-us__our-services-heading {
@@ -222,6 +321,10 @@
     text-transform: uppercase;
     color: white;
     font-weight: 400;
+    @include breakpoint(mobile) {
+        font-weight: 600;
+        font-size: 1.8rem;
+    }
     &::after {
         content: '';
         width: 11.5rem;
@@ -229,12 +332,21 @@
         background-color: $primary-color;
         display: block;
         margin-top: 1rem;
+        @include breakpoint(mobile) {
+            margin-top: 0.5rem;
+        }
     }
 }
 
 .about-us__our-services-navigation {
     width: 32rem;
-    
+    flex-shrink: 0;
+    margin-right: 2rem;
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin-right: 0;
+        flex-shrink: 1;
+    }
 }
 
 .about-us__our-services-navigation-list {
@@ -268,6 +380,11 @@
     position: relative;
     width: 68.6rem;
     margin-left: auto;
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 2.5rem;
+    }
 }
 
 .about-us__our-services-tab-item {
@@ -285,7 +402,7 @@
     &.active {
         position: relative;
         opacity: 1;
-        visibility: visible;
+        visibility: inherit;
         z-index: 2;
     }
 }
@@ -298,6 +415,9 @@
     letter-spacing: 0.13em;
     font-weight: 700;
     font-family: $playfair;
+    @include breakpoint(mobile) {
+        font-size: 2.5rem;
+    }
 }
 
 
@@ -307,8 +427,14 @@
     font-size: 1.6rem;
     line-height: 1.7;
     margin-top: 3rem;
+    @include breakpoint(mobile) {
+        margin-top: 2rem;
+    }
     p {
         margin-bottom: 2rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     img {
@@ -316,6 +442,10 @@
         max-width: 24rem;
         height: auto;
         margin-bottom: 2rem;
+        @include breakpoint(mobile) {
+            max-width: none;
+            width: 100%;
+        }
     }
 }
 
@@ -323,6 +453,7 @@
 
 .about-us__our-services-read-more {
     margin-top: 2rem;
+    
 }
 
 
@@ -330,17 +461,31 @@
     display: flex;
     align-items: center;
     flex-grow: 1;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        flex-grow: 0;
+        align-items: stretch;
+    }
 }
 
 
 .about-us__our-projects-navigation {
     width: 42rem;
     margin-right: auto;
+    
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin-right: 0;
+        flex-shrink: 1;
+    }
 }
 
 
 .about-us__our-projects-list-item {
     margin-bottom: 1rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 2.5rem;
+    }
 }
 
 
@@ -351,6 +496,10 @@
     text-transform: uppercase;
     color: white;
     font-weight: 400;
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
     &::after {
         content: '';
         width: 11.5rem;
@@ -358,6 +507,9 @@
         background-color: $primary-color;
         display: block;
         margin-top: 1rem;
+        @include breakpoint(mobile) {
+            margin-top: 0.5rem;
+        }
     }
 }
 
@@ -368,12 +520,18 @@
 }
 
 
+
+
+
 .about-us__our-projects-link {
     font-size: 1.6rem;
     line-height: 2rem;
     font-family: $playfair;
-    color: rgba(255, 255, 255, 0.5);
+    color: #ffffff80;
     transition: color .2s;
+    @include breakpoint(mobile) {
+        line-height: 1.4;
+    }
     &:link,
     &:visited {
         color: rgba(255, 255, 255, 0.5);
@@ -396,6 +554,15 @@
 .about-us__our-projects-tab-items {
     position: relative;
     width: 74rem;
+    margin-left: 3rem;
+    @include breakpoint(laptop) {
+        width: 60rem;
+    }
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin-top: 2rem;
+        margin-left: 0;
+    }
 }
 
 
@@ -414,10 +581,15 @@
     
     width: 100%;
     padding-top: 8rem;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        padding-top: 0;
+        
+    }
     &.active {
         position: relative;
         opacity: 1;
-        visibility: visible;
+        visibility: inherit;
         z-index: 2;
     }
 }
@@ -425,12 +597,27 @@
 .about-us__our-projects-images {
     width: 39rem;
     flex-shrink: 0;
+    @include breakpoint(desktop) {
+        width: 30rem;
+    }
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-shrink: initial;
+        margin-bottom: 2rem;
+    }
 }
 
 .about-us__our-projects-image-card {
     padding-left: 8rem;
     padding-bottom: 8rem;
     padding-top: .8rem;
+    @include breakpoint(desktop) {
+        padding-left: 4rem;
+        padding-bottom: 4rem;
+    }
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
 }
 
 .about-us__our-projects-image {
@@ -438,11 +625,27 @@
     display: block;
     height: auto;
     box-shadow: -8rem 8rem 0 #1F1D21;
+    @include breakpoint(desktop) {
+        box-shadow: -4rem 4rem 0 #1F1D21;
+    }
+    @include breakpoint(mobile) {
+        box-shadow: none;
+    }
 }
 
 .about-us__our-projects-main-info {
     width: 28rem;
     margin-left: auto;
+    @include breakpoint(desktop) {
+        width: 50%;
+        flex-grow: 1;
+        margin-left: 3rem;
+    }
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin-left: 0;
+        flex-grow: 0;
+    }
 }
 
 
@@ -460,6 +663,9 @@
     line-height: 1.4;
     p {
         margin-bottom: 1.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -505,4 +711,7 @@
 
 .about-us__our-projects-read-more-btn {
     margin-top: 4.5rem;
+    @include breakpoint(mobile) {
+        margin-top: 3rem;
+    }
 }

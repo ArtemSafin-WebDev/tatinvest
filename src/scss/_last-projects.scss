@@ -5,6 +5,36 @@
     padding-right: $left-padding;
     justify-content: center;
     flex-grow: 1;
+    @include breakpoint(desktop) {
+        padding-right: $left-padding-mobile;
+    }
+    @include breakpoint(mobile) {
+        background-color: transparent;
+        justify-content: initial;
+        padding: 0;
+        flex-grow: 0;
+        position: relative;
+        padding-top: 6rem;
+        margin-top: 6rem;
+        &::before {
+            content: '';
+            position: absolute;
+            left: calc((100vw - 100%) / 2 * -1);
+            width: 100vw;
+            top: 0;
+            bottom: 0;
+            background-color: $darkest;
+            z-index: -1;
+        }
+    }
+}
+
+
+.last-projects__content {
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .last-projects__heading {
@@ -14,6 +44,11 @@
     text-transform: uppercase;
     color: white;
     font-weight: 400;
+    @include breakpoint(mobile) {
+        font-weight: 600;
+        font-size: 1.8rem;
+        line-height: 3rem;
+    }
     &::after {
         content: '';
         width: 11.5rem;
@@ -21,6 +56,9 @@
         background-color: $primary-color;
         display: block;
         margin-top: 1rem;
+        @include breakpoint(mobile) {
+            margin-top: .5rem;
+        }
     }
 }
 
@@ -32,32 +70,55 @@
 .last-projects__top-row {
     display: flex;
     align-items: center;
+    @include breakpoint(mobile) {
+        display: contents;
+    }
 }
 
 
 .last-projects__bottom-row {
     margin-top: 7rem;
+    @include breakpoint(mobile) {
+        margin-top: 3rem;
+    }
 }
 
 
 .last-projects__list {
     display: flex;
     margin: 0 -4rem;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        margin: 0;
+    }
 }
 
 
 .last-projects__list-item {
     padding: 0 4rem;
     width: 33.33%;
+    @include breakpoint(mobile) {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 3rem;
+    }
 }
 
 .last-projects__read-more-btn {
     margin-left: auto;
+    @include breakpoint(mobile) {
+        margin-left: 0;
+        order: 2;
+        align-self: flex-start;
+    }
 }
 
 .last-projects__card {
     display: flex;
     align-items: center;
+    @include breakpoint(mobile) {
+        align-items: stretch;
+    }
     &:link,
     &:visited {
         color: white;
@@ -69,11 +130,28 @@
     height: 19rem;
     flex-shrink: 0;
     margin-right: 3rem;
+    @include breakpoint(desktop) {
+        width: 15rem;
+        height: 15rem;
+    }
+    @include breakpoint(laptop) {
+        width: 12rem;
+        height: 12rem;
+    }
+    @include breakpoint(mobile) {
+        width: 10rem;
+        height: 10rem;
+        margin-right: 2rem;
+    }
 }
 
 .last-projects__card-info {
     width: 50%;
     flex-grow: 1;
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .last-projects__card-title {
@@ -81,6 +159,11 @@
     line-height: 1.4;
     font-weight: 700;
     font-family: $playfair;
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        margin-top: -.7rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .last-projects__card-date {
@@ -89,4 +172,7 @@
     font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.3);
     margin-top: 2.5rem;
+    @include breakpoint(mobile) {
+        margin-top: auto;
+    }
 }

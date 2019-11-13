@@ -1,25 +1,42 @@
 {% set title = "Главная страница" %} {% extends "layout.html" %} {% block content %}
 
 <div id="fullpage">
-    <div class="section fp-auto-height-responsive">
+    <div class="section fp-auto-height-responsive" data-anchor="intro">
         <div class="intro">
             <div class="header">
-                <nav class="main-nav">
-                    <ul class="main-nav__list">
-                        <li class="main-nav__list-item active">
-                            <a href="#" class="main-nav__link">Главная</a>
-                        </li>
-                        <li class="main-nav__list-item">
-                            <a href="#" class="main-nav__link">Проекты</a>
-                        </li>
-                        <li class="main-nav__list-item">
-                            <a href="#" class="main-nav__link">Услуги</a>
-                        </li>
-                        <li class="main-nav__list-item">
-                            <a href="#" class="main-nav__link">Контакты</a>
-                        </li>
-                    </ul>
-                </nav>
+                <img src="img/logo/logo-dark.svg" alt="Лого" class="header__logo">
+                <div class="header__main-nav-wrapper js-burger-wrapper">
+                    
+                    <nav class="main-nav">
+                        <a href="#" class="header__main-nav-close js-burger-close">
+                            <svg width="35" height="35" aria-hidden="true" class="icon-cross">
+                                <use xlink:href="#cross" />
+                            </svg>
+                        </a>
+                        <ul class="main-nav__list">
+                            <li class="main-nav__list-item active">
+                                <a href="#" class="main-nav__link">Главная</a>
+                            </li>
+                            <li class="main-nav__list-item">
+                                <a href="#" class="main-nav__link">Проекты</a>
+                            </li>
+                            <li class="main-nav__list-item">
+                                <a href="#" class="main-nav__link">Услуги</a>
+                            </li>
+                            <li class="main-nav__list-item">
+                                <a href="#" class="main-nav__link">Контакты</a>
+                            </li>
+                        </ul>
+                        
+                    </nav>
+                </div>
+                <a href="#" class="header__burger-btn js-burger-open">
+                    <span></span>
+                    <span></span>
+                </a>
+                <a href="#" class="header__watch-more js-watch-more">
+                    Смотреть дальше
+                </a>
             </div>
             <div class="intro__content">
                 <div class="intro__text-block">
@@ -27,18 +44,32 @@
                         Мы проектируем<br />
                         будущее
                     </h2>
-                    <a href="#more" class="filled-btn js-modal-open">
+                    <a href="#more" class="intro__more-btn filled-btn js-modal-open">
                         Узнать подробнее
                     </a>
                 </div>
                 <div class="intro__image-block">
                     <img src="img/house.jpg" alt="Фотография с домом" class="intro__image" />
+                    <a href="#content" class="intro__page-circle js-anchor">
+                        <svg width="4" height="8" aria-hidden="true" class="icon-arrow">
+                            <use xlink:href="#left-arrow" />
+                        </svg>
+                    </a>
                 </div>
+                <div class="intro__page-number">
+                    <span class="line">
+
+                    </span>
+                    <span class="number">
+                        01
+                    </span>
+                </div>
+                
             </div>
         </div>
     </div>
-    <div class="section fp-auto-height-responsive">
-        <div class="about-us js-about-us-slider">
+    <div class="section fp-auto-height-responsive" data-anchor="about-us">
+        <div class="about-us js-about-us-slider" id="content">
             <div class="about-us__slides">
                 <div class="about-us__slides-item">
                     <div class="about-us__why-us">
@@ -59,100 +90,116 @@
                         <div class="about-us__why-us-advantages">
                             <ul class="about-us__why-us-list">
                                 <li class="about-us__why-us-list-item">
-                                    <div class="about-us__why-us-amount">
-                                        640
-                                    </div>
-                                    <div class="about-us__why-us-description">
-                                        <p>
-                                            Штат компании
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="about-us__why-us-list-item">
-                                    <div class="about-us__why-us-amount">
-                                        503
-                                    </div>
-                                    <div class="about-us__why-us-description">
-                                        <p>
-                                            инженерно- технологических специалиста
-                                        </p>
+                                    <div class="about-us__why-us-card">
+                                        <div class="about-us__why-us-amount">
+                                            640
+                                        </div>
+                                        <div class="about-us__why-us-description">
+                                            <p>
+                                                Штат компании
+                                            </p>
+                                        </div>
                                     </div>
                                 </li>
                                 <li class="about-us__why-us-list-item">
-                                    <div class="about-us__why-us-amount">
-                                        9
-                                    </div>
-                                    <div class="about-us__why-us-description">
-                                        <p>
-                                            архитектурно- планировоных мастерских
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="about-us__why-us-list-item">
-                                    <div class="about-us__why-us-amount">
-                                        5
-                                    </div>
-                                    <div class="about-us__why-us-description">
-                                        <p>
-                                            офисов в городах
-                                        </p>
-                                        <ul>
-                                            <li>
-                                                Казань
-                                            </li>
-                                            <li>
-                                                Москва
-                                            </li>
-                                            <li>
-                                                Набережные Челны
-                                            </li>
-                                            <li>
-                                                Нижнекамск
-                                            </li>
-                                            <li>
-                                                Зеленодольск
-                                            </li>
-                                        </ul>
+                                    <div class="about-us__why-us-card">
+                                        <div class="about-us__why-us-amount">
+                                            503
+                                        </div>
+                                        <div class="about-us__why-us-description">
+                                            <p>
+                                                инженерно- технологических специалиста
+                                            </p>
+                                        </div>
                                     </div>
                                 </li>
                                 <li class="about-us__why-us-list-item">
-                                    <div class="about-us__why-us-amount">
-                                        84 года
-                                    </div>
-                                    <div class="about-us__why-us-description">
-                                        <p>
-                                            возраст компании
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="about-us__why-us-list-item">
-                                    <div class="about-us__why-us-amount">
-                                        720
-                                    </div>
-                                    <div class="about-us__why-us-description">
-                                        <p>
-                                            среднее колличество проектов в год
-                                        </p>
+                                    <div class="about-us__why-us-card">
+                                        <div class="about-us__why-us-amount">
+                                            9
+                                        </div>
+                                        <div class="about-us__why-us-description">
+                                            <p>
+                                                архитектурно- планировоных мастерских
+                                            </p>
+                                        </div>
                                     </div>
                                 </li>
                                 <li class="about-us__why-us-list-item">
-                                    <div class="about-us__why-us-amount">
-                                        365 экспертиз
-                                    </div>
-                                    <div class="about-us__why-us-description">
-                                        <p>
-                                            среднее колличество положительных заключений в год
-                                        </p>
+                                    <div class="about-us__why-us-card">
+                                        <div class="about-us__why-us-amount">
+                                            5
+                                        </div>
+                                        <div class="about-us__why-us-description">
+                                            <p>
+                                                офисов в городах
+                                            </p>
+                                            <ul>
+                                                <li>
+                                                    Казань
+                                                </li>
+                                                <li>
+                                                    Москва
+                                                </li>
+                                                <li>
+                                                    Набережные Челны
+                                                </li>
+                                                <li>
+                                                    Нижнекамск
+                                                </li>
+                                                <li>
+                                                    Зеленодольск
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </li>
                                 <li class="about-us__why-us-list-item">
-                                    <div class="about-us__why-us-amount">
-                                        8 лет
+                                    <div class="about-us__why-us-card">
+                                        <div class="about-us__why-us-amount">
+                                            84 года
+                                        </div>
+                                        <div class="about-us__why-us-description">
+                                            <p>
+                                                возраст компании
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div class="about-us__why-us-description">
-                                        <p>
-                                            работы по системе ios 9001 : 2008
-                                        </p>
+                                </li>
+                                <li class="about-us__why-us-list-item">
+                                    <div class="about-us__why-us-card">
+                                        <div class="about-us__why-us-amount">
+                                            720
+                                        </div>
+                                        <div class="about-us__why-us-description">
+                                            <p>
+                                                среднее колличество проектов в год
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="about-us__why-us-list-item">
+                                    <div class="about-us__why-us-card">
+                                        <div class="about-us__why-us-amount">
+                                            365 экспертиз
+                                        </div>
+                                        <div class="about-us__why-us-description">
+                                            <p>
+                                                среднее колличество положительных заключений в год
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="about-us__why-us-list-item">
+                                    <div class="about-us__why-us-card">
+                                        <div class="about-us__why-us-amount">
+                                            8 лет
+                                        </div>
+                                        <div class="about-us__why-us-description">
+                                            <p>
+                                                работы по системе ios 9001 : 2008
+                                            </p>
+                                        </div>
                                     </div>
                                 </li>
                             </ul>
@@ -847,6 +894,7 @@
                                 </svg>
                             </a>
                         </div>
+                        <div class="last-news__slider-pagination"></div>
                     </div>
                     <div class="last-news__others">
                         <h4 class="last-news__others-heading">новости <span class="date">/ 2018-2019 </span></h4>
