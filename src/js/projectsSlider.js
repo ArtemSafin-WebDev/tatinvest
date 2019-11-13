@@ -23,6 +23,7 @@ export default function() {
         const imagesSwiper = new Swiper(imagesContainer, {
             effect: 'fade',
             watchOverflow: true,
+            autoHeight: true,
             fadeEffect: {
                 crossFade: true
             }
