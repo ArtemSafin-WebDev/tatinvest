@@ -53,7 +53,8 @@
     }
     &:link,
     &:visited {
-        color: #2b292c;
+        // color: #2b292c;
+        color: #89888a;
     }
 
     &:first-child {
@@ -69,7 +70,7 @@
     .no-touch &:hover,
     .touch &:active,
     &.active {
-        color: #89888a;
+        color: white;
     }
 }
 
@@ -81,7 +82,7 @@
 .about-us__navigation-bar {
     width: 50%;
     height: 1px;
-    background-color: #2b292c;
+    background-color: #89888a;
     position: relative;
     @include breakpoint(mobile) {
         height: 2px;

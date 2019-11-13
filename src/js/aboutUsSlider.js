@@ -68,6 +68,15 @@ export default function() {
             autoplay = false;
         })
 
+        slider.addEventListener('tabchange', function() {
+            console.log('Tabchange happened, disabling autoplay');
+            clearTimeout(timer);
+            bars.forEach((bar, barIndex) => {
+                bar.style.cssText = '';
+            });
+            autoplay = false;
+        })
+
         handleLinkClick(activeIndex);
     });
 }

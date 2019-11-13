@@ -7,10 +7,10 @@ export default function() {
         let activeTabIndex;
 
         if (!tabButtons.legth === 0 || tabItems.length === 0) {
-            console.log('Отсутвуют кнопки или табы');
+            console.warn('Отсутвуют кнопки или табы');
             return;
         } else if (tabButtons.length !== tabItems.length) {
-            console.log('Количество элементов управления не равно количеству табов');
+            console.warn('Количество элементов управления не равно количеству табов');
             return;
         }
 
@@ -34,12 +34,31 @@ export default function() {
         }
 
         tabButtons.forEach((button, index) => {
+            button.addEventListener('mouseenter', function(event) {
+                event.preventDefault();
+                if (index === activeTabIndex) {
+                    return;
+                }
+
+                setActiveTab(index, activeTabIndex);
+
+                const tabChangeEvent = new CustomEvent('tabchange', {
+                    bubbles: true
+                });
+                item.dispatchEvent(tabChangeEvent);
+            });
             button.addEventListener('click', function(event) {
                 event.preventDefault();
                 if (index === activeTabIndex) {
                     return;
                 }
+
                 setActiveTab(index, activeTabIndex);
+
+                const tabChangeEvent = new CustomEvent('tabchange', {
+                    bubbles: true
+                });
+                item.dispatchEvent(tabChangeEvent);
             });
         });
     });

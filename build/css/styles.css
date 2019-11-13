@@ -1002,6 +1002,28 @@ img {
   .dark-elements .page-sidebar-left__logo--light {
     opacity: 1; }
 
+.page-sidebar-left__logo-text {
+  display: block;
+  width: 100%;
+  text-align: center;
+  transition: opacity .2s;
+  text-transform: uppercase;
+  font-size: .8rem;
+  line-height: 1.4;
+  font-weight: 600; }
+  .page-sidebar-left__logo-text--dark {
+    color: #141215; }
+  .dark-elements .page-sidebar-left__logo-text--dark {
+    opacity: 0; }
+  .page-sidebar-left__logo-text--light {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    color: white; }
+  .dark-elements .page-sidebar-left__logo-text--light {
+    opacity: 1; }
+
 .page-sidebar-right__burger {
   font-size: 1.5rem;
   line-height: 1.8rem;
@@ -1311,10 +1333,12 @@ img {
       display: flex; } }
 
 .header__main-nav-wrapper {
-  width: 100%; }
+  width: 100%;
+  display: none; }
   @media only screen and (max-width: 768px) {
     .header__main-nav-wrapper {
       position: fixed;
+      display: block;
       left: 0;
       top: 0;
       width: 100%;
@@ -1548,7 +1572,7 @@ img {
       font-size: 1.4rem;
       font-weight: 40; } }
   .about-us__navigation-link:link, .about-us__navigation-link:visited {
-    color: #2b292c; }
+    color: #89888a; }
   .about-us__navigation-link:first-child {
     text-align: left;
     left: -4rem; }
@@ -1557,7 +1581,7 @@ img {
     right: -4rem; }
   .no-touch .about-us__navigation-link:hover,
   .touch .about-us__navigation-link:active, .about-us__navigation-link.active {
-    color: #89888a; }
+    color: white; }
 
 .about-us__navigation-bars {
   display: flex;
@@ -1566,7 +1590,7 @@ img {
 .about-us__navigation-bar {
   width: 50%;
   height: 1px;
-  background-color: #2b292c;
+  background-color: #89888a;
   position: relative; }
   @media only screen and (max-width: 768px) {
     .about-us__navigation-bar {

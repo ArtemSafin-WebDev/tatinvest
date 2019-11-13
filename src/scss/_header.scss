@@ -1,6 +1,5 @@
 .header {
     margin-top: $top-margin - 2rem;
-
     @include breakpoint(mobile) {
         margin: 0;
         align-items: center;
@@ -43,8 +42,10 @@
 
 .header__main-nav-wrapper {
     width: 100%;
+    display: none;
     @include breakpoint(mobile) {
         position: fixed;
+        display: block;
         left: 0;
         top: 0;
         width: 100%;
