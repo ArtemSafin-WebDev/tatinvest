@@ -799,6 +799,12 @@ button.swiper-pagination-bullet {
   font-style: normal;
   font-display: swap; }
 
+@font-face {
+  font-family: 'Bankir Retro';
+  src: url("../misc/fonts/subset-Bankir-Retro.woff2") format("woff2"), url("../misc/fonts/subset-Bankir-Retro.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
 *,
 *::after,
 *::before {
@@ -928,19 +934,21 @@ img {
       display: none; } }
   .dark-elements .page-sidebar-right, .dark-elements
   .page-sidebar-left {
-    background-color: #141215; }
+    background-color: #182949; }
 
 .page-sidebar-left {
   border-right: 1px solid #bcbbbc;
   padding-left: 2rem;
   padding-right: 2rem; }
   .dark-elements .page-sidebar-left {
-    border-color: #2b292c; }
+    border-color: #2b292c;
+    border-color: rgba(255, 255, 255, 0.5); }
 
 .page-sidebar-right {
   border-left: 1px solid #bcbbbc; }
   .dark-elements .page-sidebar-right {
-    border-color: #2b292c; }
+    border-color: #2b292c;
+    border-color: rgba(255, 255, 255, 0.5); }
   .first-section .page-sidebar-right {
     border-color: transparent; }
 
@@ -980,7 +988,7 @@ img {
     background-color: #5a595b; }
 
 .page-sidebar-left__page-number-digit {
-  font-family: "Playfair Display", serif;
+  font-family: "Bankir Retro", serif;
   text-transform: uppercase;
   font-size: 2rem;
   text-align: center;
@@ -1169,7 +1177,8 @@ img {
   min-height: 100%;
   padding-left: 12rem;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  position: relative; }
   @media only screen and (max-width: 1400px) {
     .intro {
       padding-left: 6rem; } }
@@ -1200,7 +1209,7 @@ img {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   font-weight: 700;
-  font-family: "Playfair Display", serif; }
+  font-family: "Bankir Retro", serif; }
   @media only screen and (max-width: 768px) {
     .intro__heading {
       font-size: 2.5rem;
@@ -1217,19 +1226,21 @@ img {
   bottom: 0;
   right: 0;
   height: 90%;
-  z-index: -1; }
+  z-index: -1;
+  width: 100%;
+  height: 100%; }
   @media only screen and (max-width: 768px) {
     .intro__image-block {
       height: auto;
       z-index: 1;
       position: relative;
       margin-left: -1.6rem;
-      margin-top: -9.4rem; } }
+      margin-top: -12.7rem;
+      order: 1; } }
 
 .intro__image {
   height: 100%;
-  width: auto;
-  max-width: 100%;
+  width: 100%;
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1264,7 +1275,7 @@ img {
       transform: scaleY(2); }
   .intro__page-number .number {
     font-size: 1.5rem;
-    font-family: "Playfair Display", serif;
+    font-family: "Bankir Retro", serif;
     color: black;
     margin-left: 1.5rem; }
   @media only screen and (max-width: 768px) {
@@ -1520,7 +1531,7 @@ img {
   padding-left: 12rem;
   display: flex;
   flex-direction: column;
-  background-color: #141215;
+  background-color: #182949;
   color: white;
   padding-right: 12rem; }
   @media only screen and (max-width: 1400px) {
@@ -1545,7 +1556,7 @@ img {
         width: 100vw;
         top: 0;
         bottom: 0;
-        background-color: #141215;
+        background-color: #182949;
         z-index: -1; } }
 
 .about-us__navigation {
@@ -1826,7 +1837,7 @@ img {
   color: rgba(255, 255, 255, 0.5);
   font-size: 2rem;
   line-height: 2.5rem;
-  font-family: "Playfair Display", serif;
+  font-family: "Bankir Retro", serif;
   font-weight: 400;
   letter-spacing: 0.05em;
   transition: color 0.2s; }
@@ -1870,7 +1881,7 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.13em;
   font-weight: 700;
-  font-family: "Playfair Display", serif; }
+  font-family: "Bankir Retro", serif; }
   @media only screen and (max-width: 768px) {
     .about-us__our-services-tab-heading {
       font-size: 2.5rem; } }
@@ -1953,7 +1964,7 @@ img {
 .about-us__our-projects-link {
   font-size: 1.6rem;
   line-height: 2rem;
-  font-family: "Playfair Display", serif;
+  font-family: "Bankir Retro", serif;
   color: #ffffff80;
   transition: color .2s; }
   @media only screen and (max-width: 768px) {
@@ -2058,7 +2069,7 @@ img {
 .about-us__our-projects-card-heading {
   font-size: 2rem;
   line-height: 1.4;
-  font-family: "Playfair Display", serif;
+  font-family: "Bankir Retro", serif;
   font-weight: 700;
   margin-bottom: 2rem; }
 
@@ -2279,7 +2290,7 @@ img {
   flex-direction: column; }
 
 .last-news__others-card-title {
-  font-family: "Playfair Display", serif;
+  font-family: "Bankir Retro", serif;
   font-size: 2rem;
   line-height: 1.4;
   font-weight: 700;
@@ -2340,7 +2351,7 @@ img {
   font-size: 3.6rem;
   line-height: 1.7;
   font-weight: 700;
-  font-family: "Playfair Display", serif;
+  font-family: "Bankir Retro", serif;
   color: white; }
   @media only screen and (max-width: 1200px) {
     .last-news__slider-card-title {
@@ -2412,7 +2423,7 @@ img {
   padding-left: 12rem;
   display: flex;
   flex-direction: column;
-  background-color: #141215;
+  background-color: #182949;
   color: white;
   padding-right: 12rem;
   justify-content: center;
@@ -2442,7 +2453,7 @@ img {
         width: 100vw;
         top: 0;
         bottom: 0;
-        background-color: #141215;
+        background-color: #182949;
         z-index: -1; } }
 
 @media only screen and (max-width: 768px) {
@@ -2554,11 +2565,10 @@ img {
   font-size: 2rem;
   line-height: 1.4;
   font-weight: 700;
-  font-family: "Playfair Display", serif; }
+  font-family: "Bankir Retro", serif; }
   @media only screen and (max-width: 768px) {
     .last-projects__card-title {
       font-size: 1.8rem;
-      margin-top: -.7rem;
       margin-bottom: 1rem; } }
 
 .last-projects__card-date {
@@ -2693,7 +2703,7 @@ img {
   text-align: center;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  font-family: "Playfair Display", serif;
+  font-family: "Bankir Retro", serif;
   margin-bottom: 2rem; }
 
 .apply-modal__input {

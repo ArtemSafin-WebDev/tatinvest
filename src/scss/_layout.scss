@@ -33,7 +33,8 @@
     }
 
     .dark-elements & {
-        background-color: $darkest;
+        background-color: $dark-blue;
+        
     }
 }
 
@@ -45,12 +46,14 @@
 
     .dark-elements & {
         border-color: #2b292c;
+        border-color: rgba(white, .5);
     }
 }
 .page-sidebar-right {
     border-left: 1px solid #bcbbbc;
     .dark-elements & {
         border-color: #2b292c;
+        border-color: rgba(white, .5);
     }
 
     .first-section & {
