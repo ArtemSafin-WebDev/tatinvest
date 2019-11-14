@@ -33,11 +33,12 @@
     display: flex;
     background-color: #d1e2f2;
     min-height: 44rem;
-    max-width: 72rem;
+    width: 72rem;
     position: relative;
     @include breakpoint(mobile) {
         min-height: none;
         max-width: none;
+        width: auto;
         min-height: 100%;
     }
 }

@@ -34,7 +34,13 @@
 
     .dark-elements & {
         background-color: $dark-blue;
-        
+    }
+
+    .first-section & {
+        background-color: transparent;
+        position: relative;
+        z-index: 30;
+        border-color: rgba(black, .3);
     }
 }
 
@@ -45,20 +51,20 @@
     padding-right: 2rem;
 
     .dark-elements & {
-        border-color: #2b292c;
+        // border-color: #2b292c;
         border-color: rgba(white, .5);
     }
 }
 .page-sidebar-right {
     border-left: 1px solid #bcbbbc;
     .dark-elements & {
-        border-color: #2b292c;
+        // border-color: #2b292c;
         border-color: rgba(white, .5);
     }
 
-    .first-section & {
-        border-color: transparent;
-    }
+    // .first-section & {
+    //     border-color: transparent;
+    // }
 }
 
 .page-sidebar-left__logo-block {
