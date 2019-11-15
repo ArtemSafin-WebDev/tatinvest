@@ -39,6 +39,11 @@ export default function() {
             document.body.classList.remove('last-section');
         }
 
+
+        if (destination.isLast && destination.isFirst) {
+            document.body.classList.add('single-section');
+        }
+
         // Change page number
 
         const number = destination.index + 1;

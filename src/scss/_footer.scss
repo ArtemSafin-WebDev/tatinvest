@@ -3,9 +3,14 @@
     padding-bottom: 9rem;
     margin-top: auto;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    &--dark {
+        color: $darkest;
+    }
     @include breakpoint(mobile) {
         border: none;
         margin-top: 6rem;
+        margin-top: 0;
         padding: 6rem 0;
     }
 }
@@ -36,7 +41,7 @@
 
 
 .footer__link {
-    color: white;
+    color: inherit;
     font-size: 1.6rem;
     line-height: 1.4;
    
@@ -47,6 +52,6 @@
     }
     &:link,
     &:visited {
-        color: white;
+        color: inherit;
     }
 }

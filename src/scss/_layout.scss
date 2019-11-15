@@ -85,6 +85,11 @@
     .dark-elements & {
         color: white;
     }
+
+
+    .single-section & {
+        display: none;
+    }
 }
 
 .page-sidebar-left__page-number-line {
@@ -297,6 +302,11 @@
     .dark-elements.touch &:active {
         background-color: white;
         color: black;
+    }
+
+
+    .single-section & {
+        display: none;
     }
 }
 
