@@ -799,12 +799,6 @@ button.swiper-pagination-bullet {
   font-style: normal;
   font-display: swap; }
 
-@font-face {
-  font-family: 'Bankir Retro';
-  src: url("../misc/fonts/subset-Bankir-Retro.woff2") format("woff2"), url("../misc/fonts/subset-Bankir-Retro.woff") format("woff");
-  font-weight: 500;
-  font-style: normal; }
-
 *,
 *::after,
 *::before {
@@ -992,7 +986,7 @@ img {
     background-color: #5a595b; }
 
 .page-sidebar-left__page-number-digit {
-  font-family: "Bankir Retro", serif;
+  font-family: "Playfair Display", serif;
   text-transform: uppercase;
   font-size: 2rem;
   text-align: center;
@@ -1215,7 +1209,7 @@ img {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   font-weight: 700;
-  font-family: "Bankir Retro", serif; }
+  font-family: "Playfair Display", serif; }
   @media only screen and (max-width: 768px) {
     .intro__heading {
       font-size: 2.5rem;
@@ -1280,7 +1274,7 @@ img {
       transform: scaleY(2); }
   .intro__page-number .number {
     font-size: 1.5rem;
-    font-family: "Bankir Retro", serif;
+    font-family: "Playfair Display", serif;
     color: black;
     margin-left: 1.5rem; }
   @media only screen and (max-width: 768px) {
@@ -1900,7 +1894,7 @@ img {
   color: rgba(255, 255, 255, 0.5);
   font-size: 2rem;
   line-height: 2.5rem;
-  font-family: "Bankir Retro", serif;
+  font-family: "Playfair Display", serif;
   font-weight: 400;
   letter-spacing: 0.05em;
   transition: color 0.2s; }
@@ -1944,7 +1938,7 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.13em;
   font-weight: 700;
-  font-family: "Bankir Retro", serif; }
+  font-family: "Playfair Display", serif; }
   @media only screen and (max-width: 768px) {
     .about-us__our-services-tab-heading {
       font-size: 2.5rem; } }
@@ -2027,7 +2021,7 @@ img {
 .about-us__our-projects-link {
   font-size: 1.6rem;
   line-height: 2rem;
-  font-family: "Bankir Retro", serif;
+  font-family: "Playfair Display", serif;
   color: #ffffff80;
   transition: color .2s; }
   @media only screen and (max-width: 768px) {
@@ -2132,7 +2126,7 @@ img {
 .about-us__our-projects-card-heading {
   font-size: 2rem;
   line-height: 1.4;
-  font-family: "Bankir Retro", serif;
+  font-family: "Playfair Display", serif;
   font-weight: 700;
   margin-bottom: 2rem; }
 
@@ -2353,11 +2347,12 @@ img {
   flex-direction: column; }
 
 .last-news__others-card-title {
-  font-family: "Bankir Retro", serif;
+  font-family: "Playfair Display", serif;
   font-size: 2rem;
   line-height: 1.4;
   font-weight: 700;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  margin-top: -.8rem; }
 
 .last-news__others-card-date {
   letter-spacing: 0.13em;
@@ -2414,7 +2409,7 @@ img {
   font-size: 3.6rem;
   line-height: 1.7;
   font-weight: 700;
-  font-family: "Bankir Retro", serif;
+  font-family: "Playfair Display", serif;
   color: white; }
   @media only screen and (max-width: 1200px) {
     .last-news__slider-card-title {
@@ -2628,7 +2623,7 @@ img {
   font-size: 2rem;
   line-height: 1.4;
   font-weight: 700;
-  font-family: "Bankir Retro", serif; }
+  font-family: "Playfair Display", serif; }
   @media only screen and (max-width: 768px) {
     .last-projects__card-title {
       font-size: 1.8rem;
@@ -2771,7 +2766,7 @@ img {
   text-align: center;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  font-family: "Bankir Retro", serif;
+  font-family: "Playfair Display", serif;
   margin-bottom: 2rem; }
 
 .apply-modal__input {
@@ -2884,11 +2879,36 @@ img {
       padding-bottom: 0; } }
   .about-company__content > * + * {
     margin-top: 2rem; }
-  .about-company__content p {
-    text-indent: 2em; }
-    @media only screen and (max-width: 768px) {
-      .about-company__content p {
-        text-indent: 0; } }
+  .about-company__content a:link, .about-company__content a:visited {
+    color: #FB7953; }
+  .no-touch .about-company__content a:hover,
+  .touch .about-company__content a:active {
+    text-decoration: underline; }
+  .about-company__content > h1,
+  .about-company__content > h2,
+  .about-company__content > h3 {
+    font-size: 2rem; }
+  .about-company__content > h4,
+  .about-company__content > h5,
+  .about-company__content > h5 {
+    font-size: 1.5rem; }
+  .about-company__content ul li {
+    padding-left: 2rem;
+    position: relative;
+    margin-bottom: 1rem; }
+    .about-company__content ul li:last-child {
+      margin-bottom: 0; }
+    .about-company__content ul li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: .4em;
+      background-color: #FB7953; }
+    .about-company__content ul li > ul {
+      margin-top: 1rem; }
   .about-company__content img {
     display: block;
     max-width: 50%; }

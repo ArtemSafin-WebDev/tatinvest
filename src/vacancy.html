@@ -1,0 +1,103 @@
+{% set title = "Главная страница" %} {% extends "layout.html" %} {% block content %}
+
+<div id="fullpage">
+    <div class="section fp-auto-height-responsive">
+        <div class="about-company">
+            <div class="header">
+                <img src="img/logo/logo-dark.svg" alt="Лого" class="header__logo" />
+                <div class="header__main-nav-wrapper js-burger-wrapper">
+                    <nav class="main-nav">
+                        <a href="#" class="header__main-nav-close js-burger-close">
+                            <svg width="35" height="35" aria-hidden="true" class="icon-cross">
+                                <use xlink:href="#cross" />
+                            </svg>
+                        </a>
+                        <ul class="main-nav__list">
+                            <li class="main-nav__list-item active">
+                                <a href="index.html" class="main-nav__link">Главная</a>
+                            </li>
+                            <li class="main-nav__list-item">
+                                <a href="news.html" class="main-nav__link">Пресс-центр</a>
+                            </li>
+                            <li class="main-nav__list-item">
+                                <a href="about-company.html" class="main-nav__link">О Компании</a>
+                            </li>
+                            <li class="main-nav__list-item">
+                                <a href="contacts.html" class="main-nav__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <a href="#" class="header__burger-btn js-burger-open">
+                    <span></span>
+                    <span></span>
+                </a>
+                <a href="#" class="header__watch-more js-watch-more">
+                    Смотреть дальше
+                </a>
+            </div>
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a href="index.html" class="breadcrumbs__link">Главная</a>
+                </li>
+                <li class="breadcrumbs__item active">
+                    <a href="vacancy.html" class="breadcrumbs__link">Вакансии</a>
+                </li>
+            </ul>
+            <h2 class="about-company__heading">
+                Вакансии
+            </h2>
+            <div class="about-company__content">
+               <h3>Начальник макетной мастерской</h3>
+               <h4>Уровень зарплаты:</h4>
+               <p>
+                    от 45 000 до 60 000 руб.
+               </p>
+               <h4>Образование</h4>
+               <p>Высшее</p>
+               <h4>Обязанности</h4>
+               <ul>
+                   <li>
+                    Организация работы в мастерской по качественному и своевременному выпуску макетной продукции, определяет трудоемкость и распределяет задания (объемы работ) между специалистами мастерской.
+                   </li>
+               </ul>
+               <h4>Требования</h4>
+               <ul>
+                   <li>
+                        Опыт работы не менее 5 лет;
+                   </li>
+                   <li>
+                        Умение работать на компьютере с применением  специализированных программ.
+                   </li>
+               </ul>
+               <h4>
+                   Условия работы:
+               </h4>
+               <p>
+                    5-ти дневная рабочая неделя, 8-ми часовой рабочий день, полный социальный пакет.
+               </p>
+               <p>
+                    Дата обновления вакансии: <b>8.10.2019</b>
+               </p>
+            </div>
+            <div class="footer footer--dark">
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a href="vacancy.html" class="footer__link">Вакансии</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Руководитель</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Реквизиты</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="contacts.html" class="footer__link">Контактная информация</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

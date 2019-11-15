@@ -1,0 +1,78 @@
+{% set title = "Главная страница" %} {% extends "layout.html" %} {% block content %}
+
+<div id="fullpage">
+    <div class="section fp-auto-height-responsive">
+        <div class="about-company">
+            <div class="header">
+                <img src="img/logo/logo-dark.svg" alt="Лого" class="header__logo" />
+                <div class="header__main-nav-wrapper js-burger-wrapper">
+                    <nav class="main-nav">
+                        <a href="#" class="header__main-nav-close js-burger-close">
+                            <svg width="35" height="35" aria-hidden="true" class="icon-cross">
+                                <use xlink:href="#cross" />
+                            </svg>
+                        </a>
+                        <ul class="main-nav__list">
+                            <li class="main-nav__list-item active">
+                                <a href="index.html" class="main-nav__link">Главная</a>
+                            </li>
+                            <li class="main-nav__list-item">
+                                <a href="news.html" class="main-nav__link">Пресс-центр</a>
+                            </li>
+                            <li class="main-nav__list-item">
+                                <a href="about-company.html" class="main-nav__link">О Компании</a>
+                            </li>
+                            <li class="main-nav__list-item">
+                                <a href="contacts.html" class="main-nav__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <a href="#" class="header__burger-btn js-burger-open">
+                    <span></span>
+                    <span></span>
+                </a>
+                <a href="#" class="header__watch-more js-watch-more">
+                    Смотреть дальше
+                </a>
+            </div>
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a href="index.html" class="breadcrumbs__link">Главная</a>
+                </li>
+                <li class="breadcrumbs__item active">
+                    <a href="citybuilding.html" class="breadcrumbs__link">Градостроительство</a>
+                </li>
+            </ul>
+            <h2 class="about-company__heading">
+                Градостроительство
+            </h2>
+            <div class="about-company__content">
+                <p>
+                    Предприятие ориентировано на обеспечение комплексного и устойчивого развития территорий с учетом их уникальных преимуществ, культурно-исторических особенностей и экономической ситуации.
+                </p>
+                <p>
+                    Виды услуг: разработка документов территориального планирования, генеральных планов, проектов планировки и проектов межевания, правил землепользования и застройки кварталов, микрорайонов, их инженерного обеспечения.
+                </p>
+            </div>
+            <div class="footer footer--dark">
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a href="vacancy.html" class="footer__link">Вакансии</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Руководитель</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Реквизиты</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="contacts.html" class="footer__link">Контактная информация</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

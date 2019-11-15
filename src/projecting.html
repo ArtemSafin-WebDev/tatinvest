@@ -1,0 +1,115 @@
+{% set title = "Главная страница" %} {% extends "layout.html" %} {% block content %}
+
+<div id="fullpage">
+    <div class="section fp-auto-height-responsive">
+        <div class="about-company">
+            <div class="header">
+                <img src="img/logo/logo-dark.svg" alt="Лого" class="header__logo" />
+                <div class="header__main-nav-wrapper js-burger-wrapper">
+                    <nav class="main-nav">
+                        <a href="#" class="header__main-nav-close js-burger-close">
+                            <svg width="35" height="35" aria-hidden="true" class="icon-cross">
+                                <use xlink:href="#cross" />
+                            </svg>
+                        </a>
+                        <ul class="main-nav__list">
+                            <li class="main-nav__list-item active">
+                                <a href="index.html" class="main-nav__link">Главная</a>
+                            </li>
+                            <li class="main-nav__list-item">
+                                <a href="news.html" class="main-nav__link">Пресс-центр</a>
+                            </li>
+                            <li class="main-nav__list-item">
+                                <a href="about-company.html" class="main-nav__link">О Компании</a>
+                            </li>
+                            <li class="main-nav__list-item">
+                                <a href="contacts.html" class="main-nav__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <a href="#" class="header__burger-btn js-burger-open">
+                    <span></span>
+                    <span></span>
+                </a>
+                <a href="#" class="header__watch-more js-watch-more">
+                    Смотреть дальше
+                </a>
+            </div>
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a href="index.html" class="breadcrumbs__link">Главная</a>
+                </li>
+                <li class="breadcrumbs__item active">
+                    <a href="projecting.html" class="breadcrumbs__link">Проектирование</a>
+                </li>
+            </ul>
+            <h2 class="about-company__heading">
+                Проектирование
+            </h2>
+            <div class="about-company__content">
+                <p>
+                    Выполнение проектно-сметной документации объектов промышленного и гражданского назначения:
+                </p>
+                <ul>
+                    <li>
+                        жилищное строительство
+                    </li>
+                    <li>
+                        административные здания и сооружения
+                    </li>
+                    <li>
+                        проекты устойчивого развития (особые экономические зоны, индустриальные, логистические, IT-парки)
+                    </li>
+                    <li>
+                        общественные комплексы, в том числе:
+                        <ul>
+                            <li>
+                                культурные комплексы
+                            </li>
+                            <li>
+                                образовательные учреждения
+                            </li>
+                            <li>
+                                комплексы медицины
+                            </li>
+                            <li>
+                                спортивные комплексы
+                            </li>
+                            <li>
+                                объекты транспорта
+                            </li>
+                            <li>
+                                благоустройство и озеленение
+                            </li>
+                            <li>
+                                развитие территорий
+                            </li>
+                            <li>
+                                дизайн интерьеров
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer footer--dark">
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a href="vacancy.html" class="footer__link">Вакансии</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Руководитель</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Реквизиты</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="contacts.html" class="footer__link">Контактная информация</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

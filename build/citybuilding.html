@@ -1,5 +1,3 @@
-{% if not(title) %} {% set title = "Татинвестгражданпроект" %} {% endif %}
-
 <!DOCTYPE html>
 <html lang="ru">
     <head>
@@ -11,12 +9,22 @@
 
         <link rel="stylesheet" href="css/styles.min.css" />
         <title>
-            {{ title }}
+            Главная страница
         </title>
     </head>
     <body class="no-touch" ontouchstart="">
         <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
-            {% include "sprite.njk" %}
+            <?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <symbol viewBox="0 0 23 23" id="cross" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.5 23a.5.5 0 01-.3-.1L11.4 12.2.8 23a.5.5 0 01-.7 0 .5.5 0 010-.7l10.7-10.7L0 .8a.5.5 0 010-.7.5.5 0 01.8 0l10.6 10.7L22.1 0a.5.5 0 01.7 0 .5.5 0 01.2.4.5.5 0 01-.1.3L12.2 11.5 23 22.1a.5.5 0 010 .7.5.5 0 01-.4.2z" />
+                </symbol>
+                <symbol viewBox="0 0 46 46" id="down-arrow" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23 46a23 23 0 1123-23 23 23 0 01-23 23zm0-45a22 22 0 1022 22A22 22 0 0023 1z" />
+                    <path fill="currentColor" d="M23 26.7l-4.4-4.3.8-.8 3.6 3.7 3.6-3.7.8.8-4.4 4.3z" />
+                </symbol>
+                <symbol viewBox="0 0 6 10.7" id="left-arrow" xmlns="http://www.w3.org/2000/svg"><path d="M5.3 10.7L0 5.3 5.3 0l.7.7-4.6 4.6L6 10l-.7.8z" /></symbol>
+                <symbol viewBox="0 0 6 10.7" id="right-arrow" xmlns="http://www.w3.org/2000/svg"><path d="M.7 10.7L0 9.8l4.6-4.6L0 .7.7 0 6 5.3.7 10.7z" /></symbol>
+            </svg>
         </div>
 
         <div class="page-content">
@@ -37,7 +45,81 @@
             </div>
             <div class="page-main">
                 <div class="container">
-                    {% block content %} {% endblock %}
+                    <div id="fullpage">
+                        <div class="section fp-auto-height-responsive">
+                            <div class="about-company">
+                                <div class="header">
+                                    <img src="img/logo/logo-dark.svg" alt="Лого" class="header__logo" />
+                                    <div class="header__main-nav-wrapper js-burger-wrapper">
+                                        <nav class="main-nav">
+                                            <a href="#" class="header__main-nav-close js-burger-close">
+                                                <svg width="35" height="35" aria-hidden="true" class="icon-cross">
+                                                    <use xlink:href="#cross" />
+                                                </svg>
+                                            </a>
+                                            <ul class="main-nav__list">
+                                                <li class="main-nav__list-item active">
+                                                    <a href="index.html" class="main-nav__link">Главная</a>
+                                                </li>
+                                                <li class="main-nav__list-item">
+                                                    <a href="news.html" class="main-nav__link">Пресс-центр</a>
+                                                </li>
+                                                <li class="main-nav__list-item">
+                                                    <a href="about-company.html" class="main-nav__link">О Компании</a>
+                                                </li>
+                                                <li class="main-nav__list-item">
+                                                    <a href="contacts.html" class="main-nav__link">Контакты</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <a href="#" class="header__burger-btn js-burger-open">
+                                        <span></span>
+                                        <span></span>
+                                    </a>
+                                    <a href="#" class="header__watch-more js-watch-more">
+                                        Смотреть дальше
+                                    </a>
+                                </div>
+                                <ul class="breadcrumbs">
+                                    <li class="breadcrumbs__item">
+                                        <a href="index.html" class="breadcrumbs__link">Главная</a>
+                                    </li>
+                                    <li class="breadcrumbs__item active">
+                                        <a href="citybuilding.html" class="breadcrumbs__link">Градостроительство</a>
+                                    </li>
+                                </ul>
+                                <h2 class="about-company__heading">
+                                    Градостроительство
+                                </h2>
+                                <div class="about-company__content">
+                                    <p>
+                                        Предприятие ориентировано на обеспечение комплексного и устойчивого развития территорий с учетом их уникальных преимуществ, культурно-исторических особенностей и экономической ситуации.
+                                    </p>
+                                    <p>
+                                        Виды услуг: разработка документов территориального планирования, генеральных планов, проектов планировки и проектов межевания, правил землепользования и застройки кварталов, микрорайонов, их инженерного
+                                        обеспечения.
+                                    </p>
+                                </div>
+                                <div class="footer footer--dark">
+                                    <ul class="footer__list">
+                                        <li class="footer__list-item">
+                                            <a href="vacancy.html" class="footer__link">Вакансии</a>
+                                        </li>
+                                        <li class="footer__list-item">
+                                            <a href="#" class="footer__link">Руководитель</a>
+                                        </li>
+                                        <li class="footer__list-item">
+                                            <a href="#" class="footer__link">Реквизиты</a>
+                                        </li>
+                                        <li class="footer__list-item">
+                                            <a href="contacts.html" class="footer__link">Контактная информация</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="page-sidebar-right">

@@ -1,0 +1,90 @@
+{% set title = "Главная страница" %} {% extends "layout.html" %} {% block content %}
+
+<div id="fullpage">
+    <div class="section fp-auto-height-responsive">
+        <div class="about-company">
+            <div class="header">
+                <img src="img/logo/logo-dark.svg" alt="Лого" class="header__logo" />
+                <div class="header__main-nav-wrapper js-burger-wrapper">
+                    <nav class="main-nav">
+                        <a href="#" class="header__main-nav-close js-burger-close">
+                            <svg width="35" height="35" aria-hidden="true" class="icon-cross">
+                                <use xlink:href="#cross" />
+                            </svg>
+                        </a>
+                        <ul class="main-nav__list">
+                            <li class="main-nav__list-item active">
+                                <a href="index.html" class="main-nav__link">Главная</a>
+                            </li>
+                            <li class="main-nav__list-item">
+                                <a href="news.html" class="main-nav__link">Пресс-центр</a>
+                            </li>
+                            <li class="main-nav__list-item">
+                                <a href="about-company.html" class="main-nav__link">О Компании</a>
+                            </li>
+                            <li class="main-nav__list-item">
+                                <a href="contacts.html" class="main-nav__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <a href="#" class="header__burger-btn js-burger-open">
+                    <span></span>
+                    <span></span>
+                </a>
+                <a href="#" class="header__watch-more js-watch-more">
+                    Смотреть дальше
+                </a>
+            </div>
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a href="index.html" class="breadcrumbs__link">Главная</a>
+                </li>
+                <li class="breadcrumbs__item active">
+                    <a href="contacts.html" class="breadcrumbs__link">Контакты</a>
+                </li>
+            </ul>
+            <h2 class="about-company__heading">
+                Контакты
+            </h2>
+            <div class="about-company__content">
+                <h3>
+                    Головной офис
+                </h3>
+                <p>
+                    Адрес: ул. Чехова, д.28, г. Казань, РТ
+                </p>
+                <p>Телефон: <a href="tel:+78432360812">+7 (843) 236-08-12</a></p>
+                <p>Телефон канцелярии: <a href="tel:+78432215487">+7 (843) 221-54-87</a></p>
+                <p>Факс: <a href="tel:+78432360661">+7 (843) 236-06-61</a></p>
+                <p>E-mail: <a href="mailto:tigp@mi.ru">tigp@mi.ru</a></p>
+                <h3>
+                    Пресс-служба
+                </h3>
+                <p>Телефон: <a href="tel:+79172544368">+7 (917) 254-43-68</a></p>
+                <p>
+                    E-mail:
+                    <a href="mailto:maslovakira.s@gmail.com">maslovakira.s@gmail.com</a>
+                </p>
+            </div>
+            <div class="footer footer--dark">
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a href="vacancy.html" class="footer__link">Вакансии</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Руководитель</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Реквизиты</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="contacts.html" class="footer__link">Контактная информация</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
