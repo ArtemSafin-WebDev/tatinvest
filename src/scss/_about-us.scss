@@ -11,7 +11,8 @@
         background-color: transparent;
         // padding: 0 1rem;
         padding-top: 6rem;
-        margin-top: 4rem;
+        margin-top: 6rem;
+        
         &::before {
             content: '';
             position: absolute;
@@ -203,7 +204,7 @@
     counter-reset: why-us;
     display: flex;
     flex-wrap: wrap;
-    margin: -2.5rem;
+    margin: -2rem;
     // @include breakpoint(desktop) {
     //     margin: -1rem;
     // }
@@ -215,7 +216,7 @@
 .about-us__why-us-list-item {
     counter-increment: why-us;
     width: 25%;
-    padding: 2.5rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     // @include breakpoint(desktop) {

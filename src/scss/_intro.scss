@@ -1,7 +1,13 @@
 .intro {
     @include fullpageSection();
     position: relative;
-    
+    @include breakpoint(mobile) {
+        padding-bottom: 5rem;
+        min-height: 70vh;
+        display: flex;
+        flex-direction: column;
+        
+    }
 }
 
 .intro__content {
@@ -11,7 +17,8 @@
     @include breakpoint(mobile) {
         flex-direction: column;
         margin-top: 7rem;
-        
+        flex-grow: 0;
+        margin: auto 0;
     }
 }
 
@@ -57,11 +64,11 @@
     height: 100%;
 
     @include breakpoint(mobile) {
-        height: auto;
-        z-index: 1;
-        position: relative;
-        margin-left: -1.6rem;
-        margin-top: -12.7rem;
+        // height: auto;
+        // z-index: 1;
+        // position: relative;
+        // margin-left: -1.6rem;
+        // margin-top: -12.7rem;
         order: 1;
     }
 }
@@ -75,8 +82,8 @@
     @include objectFitCover();
 
     @include breakpoint(mobile) {
-        height: auto;
-        width: 100%;
+        // height: auto;
+        // width: 100%;
     }
 }
 
@@ -141,8 +148,8 @@
         height: 1.3rem;
         transform: rotate(-90deg);
     }
-    @include breakpoint(mobile) {
-        display: flex;
+    // @include breakpoint(mobile) {
+    //     display: flex;
       
-    }
+    // }
 }

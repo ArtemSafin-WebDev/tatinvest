@@ -54,6 +54,7 @@ export default function() {
     fullpageSlider = new Fullpage('#fullpage', {
         responsiveWidth: 769,
         scrollOverflow: true,
+        lockAnchors: true,
         afterRender: function() {
             const arrow = document.querySelector('.js-fullpage-arrow');
             if (arrow) {

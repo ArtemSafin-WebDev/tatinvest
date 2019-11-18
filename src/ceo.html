@@ -1,0 +1,109 @@
+{% set title = "Главная страница" %} {% extends "layout.html" %} {% block content %}
+
+<div id="fullpage">
+    <div class="section fp-auto-height-responsive">
+        <div class="about-company">
+            <div class="header">
+                <img src="img/logo/logo-dark.svg" alt="Лого" class="header__logo" />
+                <div class="header__main-nav-wrapper js-burger-wrapper">
+                    <nav class="main-nav">
+                        <a href="#" class="header__main-nav-close js-burger-close">
+                            <svg width="35" height="35" aria-hidden="true" class="icon-cross">
+                                <use xlink:href="#cross" />
+                            </svg>
+                        </a>
+                        <ul class="main-nav__list">
+                            <li class="main-nav__list-item active">
+                                <a href="index.html" class="main-nav__link">Главная</a>
+                            </li>
+                            <li class="main-nav__list-item">
+                                <a href="news.html" class="main-nav__link">Пресс-центр</a>
+                            </li>
+                            <li class="main-nav__list-item">
+                                <a href="about-company.html" class="main-nav__link">О Компании</a>
+                            </li>
+                            <li class="main-nav__list-item">
+                                <a href="contacts.html" class="main-nav__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <a href="#" class="header__burger-btn js-burger-open">
+                    <span></span>
+                    <span></span>
+                </a>
+                <a href="#" class="header__watch-more js-watch-more">
+                    Смотреть дальше
+                </a>
+            </div>
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a href="index.html" class="breadcrumbs__link">Главная</a>
+                </li>
+                <li class="breadcrumbs__item active">
+                    <a href="vacancy.html" class="breadcrumbs__link">Руководитель</a>
+                </li>
+            </ul>
+            <h2 class="about-company__heading">
+                Руководитель
+            </h2>
+            <div class="about-company__content">
+                <img src="img/Husnutdinov-Adel-Albertovich.jpg" alt="Директор">
+                <h3>Хуснутдинов Адель Альбертович</h3>
+                <p>
+                    Генеральный директор ГУП "Татинвестгражданпроект"
+                </p>
+                <p>
+                    <b>Дата рождения:</b> 15 Июля 1973
+                </p>
+                <p>
+                    <b>Адрес:</b> 420043, РТ, г. Казань, ул. Чехова, 28
+                </p>
+                <p>
+                    <b>Телефон: </b> <a href="tel:+78432360812">+7 (843) 236-08-12</a>
+                </p>
+                <p>
+                    <b>Факс: </b> <a href="tel:+78432360661">+7 (843) 236-06-61</a>
+                </p>
+                <p>
+                    Родился в Казани. Окончил Казанскую государственную архитектурно-строительную академию по специальности «архитектура» (1996 г.).
+                </p>
+                <ul>
+                    <li>
+                        С 1998 по 2005 гг. — архитектор-дизайнер ППС «Газстрой».
+                    </li>
+                    <li>
+                        С 2005 по 2007 гг. — генеральный директор ОАО «Головной проектный институт ГипроВТИ».
+                    </li>
+                    <li>
+                        С 2007 по 2010 гг. — первый заместитель гендиректора ГУП «Татинвестгражданпроект».
+                    </li>
+                    <li>
+                        С ноября 2010 г. — генеральный директор ГУП «Татинвестгражданпроект».
+                    </li>
+                </ul>
+                <p>
+                    Заслуженный строитель РТ (2013 г.).
+                </p>
+            </div>
+            <div class="footer footer--dark">
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a href="vacancy.html" class="footer__link">Вакансии</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Руководитель</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Реквизиты</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="contacts.html" class="footer__link">Контактная информация</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

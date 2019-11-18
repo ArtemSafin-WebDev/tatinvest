@@ -1185,6 +1185,12 @@ img {
   @media only screen and (max-width: 768px) {
     .intro {
       padding-left: 0; } }
+  @media only screen and (max-width: 768px) {
+    .intro {
+      padding-bottom: 5rem;
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column; } }
 
 .intro__content {
   flex-grow: 1;
@@ -1193,7 +1199,9 @@ img {
   @media only screen and (max-width: 768px) {
     .intro__content {
       flex-direction: column;
-      margin-top: 7rem; } }
+      margin-top: 7rem;
+      flex-grow: 0;
+      margin: auto 0; } }
 
 .intro__text-block {
   align-self: center; }
@@ -1230,11 +1238,6 @@ img {
   height: 100%; }
   @media only screen and (max-width: 768px) {
     .intro__image-block {
-      height: auto;
-      z-index: 1;
-      position: relative;
-      margin-left: -1.6rem;
-      margin-top: -12.7rem;
       order: 1; } }
 
 .intro__image {
@@ -1246,10 +1249,6 @@ img {
   -o-object-position: center;
      object-position: center;
   font-family: 'object-fit: cover; object-position: center;'; }
-  @media only screen and (max-width: 768px) {
-    .intro__image {
-      height: auto;
-      width: 100%; } }
 
 .intro__page-number {
   display: none;
@@ -1301,9 +1300,6 @@ img {
     width: .65rem;
     height: 1.3rem;
     transform: rotate(-90deg); }
-  @media only screen and (max-width: 768px) {
-    .intro__page-circle {
-      display: flex; } }
 
 .header {
   margin-top: 4rem; }
@@ -1605,7 +1601,7 @@ img {
       padding: 0;
       background-color: transparent;
       padding-top: 6rem;
-      margin-top: 4rem; }
+      margin-top: 6rem; }
       .about-us::before {
         content: '';
         position: absolute;
@@ -1766,7 +1762,7 @@ img {
   counter-reset: why-us;
   display: flex;
   flex-wrap: wrap;
-  margin: -2.5rem; }
+  margin: -2rem; }
   @media only screen and (max-width: 768px) {
     .about-us__why-us-list {
       margin: 0; } }
@@ -1774,7 +1770,7 @@ img {
 .about-us__why-us-list-item {
   counter-increment: why-us;
   width: 25%;
-  padding: 2.5rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column; }
   @media only screen and (max-width: 768px) {
@@ -2873,7 +2869,9 @@ img {
 .about-company__content {
   margin-top: 3rem;
   max-width: 90rem;
-  padding-bottom: 7rem; }
+  padding-bottom: 7rem;
+  font-size: 1.6rem;
+  line-height: 1.4; }
   @media only screen and (max-width: 768px) {
     .about-company__content {
       padding-bottom: 0; } }
@@ -2887,11 +2885,11 @@ img {
   .about-company__content > h1,
   .about-company__content > h2,
   .about-company__content > h3 {
-    font-size: 2rem; }
+    font-size: 2.2rem; }
   .about-company__content > h4,
   .about-company__content > h5,
   .about-company__content > h5 {
-    font-size: 1.5rem; }
+    font-size: 1.8rem; }
   .about-company__content ul li {
     padding-left: 2rem;
     position: relative;
@@ -2905,7 +2903,7 @@ img {
       border-radius: 50%;
       position: absolute;
       left: 0;
-      top: .4em;
+      top: .5em;
       background-color: #FB7953; }
     .about-company__content ul li > ul {
       margin-top: 1rem; }
@@ -2970,3 +2968,1795 @@ img {
 .news__slider {
   counter-increment: last-news;
   position: relative; }
+
+.intro__image-block {
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: intro-image-fade-in;
+          animation-name: intro-image-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused; }
+  .animatable .section.active .intro__image-block {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.intro__heading {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: intro-heading-slide-in;
+          animation-name: intro-heading-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused; }
+  .animatable .section.active .intro__heading {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.intro__more-btn {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: intro-btn-slide-in;
+          animation-name: intro-btn-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused; }
+  .animatable .section.active .intro__more-btn {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.page-sidebar-left,
+.page-sidebar-right {
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: sidebars-fade-in;
+          animation-name: sidebars-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused; }
+  .animatable .page-sidebar-left, .animatable
+  .page-sidebar-right {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+@-webkit-keyframes intro-image-fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes intro-image-fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes intro-heading-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(6rem); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes intro-heading-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(6rem); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@-webkit-keyframes intro-btn-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(6rem); }
+  to {
+    opacity: 1; } }
+
+@keyframes intro-btn-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(6rem); }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes sidebars-fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes sidebars-fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.about-us__why-us-heading {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-fade-in;
+          animation-name: about-us-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__why-us-heading {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__navigation {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-fade-in;
+          animation-name: about-us-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
+  .animatable .section.active .about-us__navigation {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__why-us-text {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-fade-in;
+          animation-name: about-us-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__why-us-text {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__why-us-link {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-fade-in;
+          animation-name: about-us-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__why-us-link {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-services-heading {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-fade-in;
+          animation-name: about-us-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-services-heading {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-projects-heading {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-fade-in;
+          animation-name: about-us-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-projects-heading {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-services-tab-items {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-fade-in;
+          animation-name: about-us-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-services-tab-items {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-projects-tab-items {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-fade-in;
+          animation-name: about-us-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-projects-tab-items {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__why-us-list-item:nth-child(1) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__why-us-list-item:nth-child(1) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__why-us-list-item:nth-child(2) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__why-us-list-item:nth-child(2) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__why-us-list-item:nth-child(3) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 2.7s;
+          animation-delay: 2.7s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__why-us-list-item:nth-child(3) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__why-us-list-item:nth-child(4) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__why-us-list-item:nth-child(4) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__why-us-list-item:nth-child(5) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 3.3s;
+          animation-delay: 3.3s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__why-us-list-item:nth-child(5) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__why-us-list-item:nth-child(6) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 3.6s;
+          animation-delay: 3.6s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__why-us-list-item:nth-child(6) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__why-us-list-item:nth-child(7) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 3.9s;
+          animation-delay: 3.9s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__why-us-list-item:nth-child(7) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__why-us-list-item:nth-child(8) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 4.2s;
+          animation-delay: 4.2s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__why-us-list-item:nth-child(8) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__why-us-list-item:nth-child(9) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__why-us-list-item:nth-child(9) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__why-us-list-item:nth-child(10) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 4.8s;
+          animation-delay: 4.8s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__why-us-list-item:nth-child(10) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__why-us-list-item:nth-child(11) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 5.1s;
+          animation-delay: 5.1s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__why-us-list-item:nth-child(11) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__why-us-list-item:nth-child(12) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 5.4s;
+          animation-delay: 5.4s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__why-us-list-item:nth-child(12) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__why-us-list-item:nth-child(13) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 5.7s;
+          animation-delay: 5.7s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__why-us-list-item:nth-child(13) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__why-us-list-item:nth-child(14) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__why-us-list-item:nth-child(14) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__why-us-list-item:nth-child(15) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 6.3s;
+          animation-delay: 6.3s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__why-us-list-item:nth-child(15) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-services-navigation-list-item:nth-child(1) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-services-navigation-list-item:nth-child(1) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-services-navigation-list-item:nth-child(2) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-services-navigation-list-item:nth-child(2) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-services-navigation-list-item:nth-child(3) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 1.9s;
+          animation-delay: 1.9s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-services-navigation-list-item:nth-child(3) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-services-navigation-list-item:nth-child(4) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-services-navigation-list-item:nth-child(4) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-services-navigation-list-item:nth-child(5) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-services-navigation-list-item:nth-child(5) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-services-navigation-list-item:nth-child(6) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-services-navigation-list-item:nth-child(6) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-services-navigation-list-item:nth-child(7) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 3.1s;
+          animation-delay: 3.1s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-services-navigation-list-item:nth-child(7) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-services-navigation-list-item:nth-child(8) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 3.4s;
+          animation-delay: 3.4s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-services-navigation-list-item:nth-child(8) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-services-navigation-list-item:nth-child(9) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 3.7s;
+          animation-delay: 3.7s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-services-navigation-list-item:nth-child(9) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-services-navigation-list-item:nth-child(10) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-services-navigation-list-item:nth-child(10) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-services-navigation-list-item:nth-child(11) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 4.3s;
+          animation-delay: 4.3s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-services-navigation-list-item:nth-child(11) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-services-navigation-list-item:nth-child(12) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 4.6s;
+          animation-delay: 4.6s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-services-navigation-list-item:nth-child(12) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-services-navigation-list-item:nth-child(13) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 4.9s;
+          animation-delay: 4.9s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-services-navigation-list-item:nth-child(13) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-services-navigation-list-item:nth-child(14) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 5.2s;
+          animation-delay: 5.2s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-services-navigation-list-item:nth-child(14) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-services-navigation-list-item:nth-child(15) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-services-navigation-list-item:nth-child(15) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-projects-list-item:nth-child(1) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-projects-list-item:nth-child(1) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-projects-list-item:nth-child(2) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-projects-list-item:nth-child(2) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-projects-list-item:nth-child(3) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 1.9s;
+          animation-delay: 1.9s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-projects-list-item:nth-child(3) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-projects-list-item:nth-child(4) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-projects-list-item:nth-child(4) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-projects-list-item:nth-child(5) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-projects-list-item:nth-child(5) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-projects-list-item:nth-child(6) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-projects-list-item:nth-child(6) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-projects-list-item:nth-child(7) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 3.1s;
+          animation-delay: 3.1s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-projects-list-item:nth-child(7) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-projects-list-item:nth-child(8) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 3.4s;
+          animation-delay: 3.4s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-projects-list-item:nth-child(8) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-projects-list-item:nth-child(9) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 3.7s;
+          animation-delay: 3.7s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-projects-list-item:nth-child(9) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-projects-list-item:nth-child(10) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-projects-list-item:nth-child(10) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-projects-list-item:nth-child(11) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 4.3s;
+          animation-delay: 4.3s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-projects-list-item:nth-child(11) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-projects-list-item:nth-child(12) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 4.6s;
+          animation-delay: 4.6s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-projects-list-item:nth-child(12) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-projects-list-item:nth-child(13) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 4.9s;
+          animation-delay: 4.9s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-projects-list-item:nth-child(13) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-projects-list-item:nth-child(14) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 5.2s;
+          animation-delay: 5.2s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-projects-list-item:nth-child(14) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.about-us__our-projects-list-item:nth-child(15) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: about-us-slide-in;
+          animation-name: about-us-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s; }
+  .animatable .section.active .about-us__slides-item.active .about-us__our-projects-list-item:nth-child(15) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+@-webkit-keyframes about-us-fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes about-us-fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes about-us-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(6rem); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes about-us-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(6rem); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+.last-news__heading {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-news-fade-in;
+          animation-name: last-news-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
+  .animatable .section.active .last-news__heading {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-news__show-all {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-news-fade-in;
+          animation-name: last-news-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
+  .animatable .section.active .last-news__show-all {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-news__slider {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-news-fade-in;
+          animation-name: last-news-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s; }
+  .animatable .section.active .last-news__slider {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-news__slider-card-title {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-news-slide-in;
+          animation-name: last-news-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s; }
+  .animatable .section.active .last-news__slider-card-title {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-news__slider-card-date {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-news-slide-in;
+          animation-name: last-news-slide-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s; }
+  .animatable .section.active .last-news__slider-card-date {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-news__slider-arrow-btn {
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-news-fade-in;
+          animation-name: last-news-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s; }
+  .animatable .section.active .last-news__slider-arrow-btn {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-news__others-heading {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-news-fade-in;
+          animation-name: last-news-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s; }
+  .animatable .section.active .last-news__others-heading {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-news__others-list-item:nth-child(1) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-news-slide-in-right;
+          animation-name: last-news-slide-in-right;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 2.9s;
+          animation-delay: 2.9s; }
+  .animatable .section.active .last-news__others-list-item:nth-child(1) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-news__others-list-item:nth-child(2) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-news-slide-in-right;
+          animation-name: last-news-slide-in-right;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 3.2s;
+          animation-delay: 3.2s; }
+  .animatable .section.active .last-news__others-list-item:nth-child(2) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-news__others-list-item:nth-child(3) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-news-slide-in-right;
+          animation-name: last-news-slide-in-right;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s; }
+  .animatable .section.active .last-news__others-list-item:nth-child(3) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-news__others-list-item:nth-child(4) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-news-slide-in-right;
+          animation-name: last-news-slide-in-right;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 3.8s;
+          animation-delay: 3.8s; }
+  .animatable .section.active .last-news__others-list-item:nth-child(4) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-news__others-list-item:nth-child(5) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-news-slide-in-right;
+          animation-name: last-news-slide-in-right;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 4.1s;
+          animation-delay: 4.1s; }
+  .animatable .section.active .last-news__others-list-item:nth-child(5) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-news__others-list-item:nth-child(6) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-news-slide-in-right;
+          animation-name: last-news-slide-in-right;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 4.4s;
+          animation-delay: 4.4s; }
+  .animatable .section.active .last-news__others-list-item:nth-child(6) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-news__others-list-item:nth-child(7) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-news-slide-in-right;
+          animation-name: last-news-slide-in-right;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 4.7s;
+          animation-delay: 4.7s; }
+  .animatable .section.active .last-news__others-list-item:nth-child(7) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-news__others-list-item:nth-child(8) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-news-slide-in-right;
+          animation-name: last-news-slide-in-right;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s; }
+  .animatable .section.active .last-news__others-list-item:nth-child(8) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-news__others-list-item:nth-child(9) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-news-slide-in-right;
+          animation-name: last-news-slide-in-right;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 5.3s;
+          animation-delay: 5.3s; }
+  .animatable .section.active .last-news__others-list-item:nth-child(9) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-news__others-list-item:nth-child(10) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-news-slide-in-right;
+          animation-name: last-news-slide-in-right;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 5.6s;
+          animation-delay: 5.6s; }
+  .animatable .section.active .last-news__others-list-item:nth-child(10) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-news__others-list-item:nth-child(11) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-news-slide-in-right;
+          animation-name: last-news-slide-in-right;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 5.9s;
+          animation-delay: 5.9s; }
+  .animatable .section.active .last-news__others-list-item:nth-child(11) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-news__others-list-item:nth-child(12) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-news-slide-in-right;
+          animation-name: last-news-slide-in-right;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 6.2s;
+          animation-delay: 6.2s; }
+  .animatable .section.active .last-news__others-list-item:nth-child(12) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-news__others-list-item:nth-child(13) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-news-slide-in-right;
+          animation-name: last-news-slide-in-right;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 6.5s;
+          animation-delay: 6.5s; }
+  .animatable .section.active .last-news__others-list-item:nth-child(13) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-news__others-list-item:nth-child(14) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-news-slide-in-right;
+          animation-name: last-news-slide-in-right;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 6.8s;
+          animation-delay: 6.8s; }
+  .animatable .section.active .last-news__others-list-item:nth-child(14) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-news__others-list-item:nth-child(15) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-news-slide-in-right;
+          animation-name: last-news-slide-in-right;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 7.1s;
+          animation-delay: 7.1s; }
+  .animatable .section.active .last-news__others-list-item:nth-child(15) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+@-webkit-keyframes last-news-fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes last-news-fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes last-news-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(4rem); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes last-news-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(4rem); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@-webkit-keyframes last-news-slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(4rem); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes last-news-slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(4rem); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+
+.last-projects__heading {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-projects-fade-in;
+          animation-name: last-projects-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
+  .animatable .section.active .last-projects__heading {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-projects__read-more-btn {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-projects-fade-in;
+          animation-name: last-projects-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
+  .animatable .section.active .last-projects__read-more-btn {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-projects__list-item:nth-child(1) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-projects-fade-in;
+          animation-name: last-projects-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s; }
+  .animatable .section.active .last-projects__list-item:nth-child(1) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-projects__list-item:nth-child(2) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-projects-fade-in;
+          animation-name: last-projects-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s; }
+  .animatable .section.active .last-projects__list-item:nth-child(2) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-projects__list-item:nth-child(3) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-projects-fade-in;
+          animation-name: last-projects-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s; }
+  .animatable .section.active .last-projects__list-item:nth-child(3) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-projects__list-item:nth-child(4) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-projects-fade-in;
+          animation-name: last-projects-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s; }
+  .animatable .section.active .last-projects__list-item:nth-child(4) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-projects__list-item:nth-child(5) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-projects-fade-in;
+          animation-name: last-projects-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s; }
+  .animatable .section.active .last-projects__list-item:nth-child(5) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-projects__list-item:nth-child(6) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-projects-fade-in;
+          animation-name: last-projects-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s; }
+  .animatable .section.active .last-projects__list-item:nth-child(6) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-projects__list-item:nth-child(7) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-projects-fade-in;
+          animation-name: last-projects-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s; }
+  .animatable .section.active .last-projects__list-item:nth-child(7) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-projects__list-item:nth-child(8) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-projects-fade-in;
+          animation-name: last-projects-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s; }
+  .animatable .section.active .last-projects__list-item:nth-child(8) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-projects__list-item:nth-child(9) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-projects-fade-in;
+          animation-name: last-projects-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s; }
+  .animatable .section.active .last-projects__list-item:nth-child(9) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-projects__list-item:nth-child(10) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-projects-fade-in;
+          animation-name: last-projects-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s; }
+  .animatable .section.active .last-projects__list-item:nth-child(10) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-projects__list-item:nth-child(11) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-projects-fade-in;
+          animation-name: last-projects-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 6.5s;
+          animation-delay: 6.5s; }
+  .animatable .section.active .last-projects__list-item:nth-child(11) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-projects__list-item:nth-child(12) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-projects-fade-in;
+          animation-name: last-projects-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s; }
+  .animatable .section.active .last-projects__list-item:nth-child(12) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-projects__list-item:nth-child(13) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-projects-fade-in;
+          animation-name: last-projects-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 7.5s;
+          animation-delay: 7.5s; }
+  .animatable .section.active .last-projects__list-item:nth-child(13) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-projects__list-item:nth-child(14) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-projects-fade-in;
+          animation-name: last-projects-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s; }
+  .animatable .section.active .last-projects__list-item:nth-child(14) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.last-projects__list-item:nth-child(15) {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-projects-fade-in;
+          animation-name: last-projects-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 8.5s;
+          animation-delay: 8.5s; }
+  .animatable .section.active .last-projects__list-item:nth-child(15) {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+.footer {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: last-projects-fade-in;
+          animation-name: last-projects-fade-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
+  .animatable .section.active .footer {
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
+
+@-webkit-keyframes last-projects-fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes last-projects-fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@media only screen and (max-width: 768px) {
+  * {
+    -webkit-animation-name: none !important;
+            animation-name: none !important; } }

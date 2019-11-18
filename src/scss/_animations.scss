@@ -1,0 +1,476 @@
+.intro__image-block {
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-name: intro-image-fade-in;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+    .animatable .section.active & {
+        animation-play-state: running;
+    }
+}
+
+.intro__heading {
+    animation-delay: 0.6s;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-name: intro-heading-slide-in;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+    .animatable .section.active & {
+        animation-play-state: running;
+    }
+}
+
+.intro__more-btn {
+    animation-delay: 1s;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-name: intro-btn-slide-in;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+    .animatable .section.active & {
+        animation-play-state: running;
+    }
+}
+
+.page-sidebar-left,
+.page-sidebar-right {
+   
+    
+        animation-delay: 1.3s;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-out;
+        animation-name: sidebars-fade-in;
+        animation-fill-mode: backwards;
+        animation-play-state: paused;
+    
+    .animatable & {
+        animation-play-state: running;
+    }
+}
+
+
+
+
+@keyframes intro-image-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes intro-heading-slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(6rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes intro-btn-slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(6rem);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes sidebars-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.about-us__why-us-heading {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-name: about-us-fade-in;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+    animation-delay: 1s;
+    .animatable .section.active .about-us__slides-item.active & {
+        animation-play-state: running;
+    }
+
+}
+
+
+.about-us__navigation {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-name: about-us-fade-in;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+    animation-delay: 1s;
+    .animatable .section.active & {
+        animation-play-state: running;
+    }
+}
+
+.about-us__why-us-text {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-name: about-us-fade-in;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+    animation-delay: 1.4s;
+    .animatable .section.active .about-us__slides-item.active & {
+        animation-play-state: running;
+    }
+}
+
+.about-us__why-us-link {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-name: about-us-fade-in;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+    animation-delay: 1.8s;
+    .animatable .section.active .about-us__slides-item.active & {
+        animation-play-state: running;
+    }
+}
+
+
+
+.about-us__our-services-heading {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-name: about-us-fade-in;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+    animation-delay: 1s;
+    .animatable .section.active .about-us__slides-item.active & {
+        animation-play-state: running;
+    }
+}
+
+
+.about-us__our-projects-heading {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-name: about-us-fade-in;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+    animation-delay: 1s;
+    .animatable .section.active .about-us__slides-item.active & {
+        animation-play-state: running;
+    }
+}
+
+
+.about-us__our-services-tab-items {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-name: about-us-fade-in;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+    animation-delay: 1s;
+    .animatable .section.active .about-us__slides-item.active & {
+        animation-play-state: running;
+    }
+}
+
+
+.about-us__our-projects-tab-items {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-name: about-us-fade-in;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+    animation-delay: 1s;
+    .animatable .section.active .about-us__slides-item.active & {
+        animation-play-state: running;
+    }
+}
+
+@for $i from 1 through 15 {
+    .about-us__why-us-list-item:nth-child(#{$i}) {
+        animation-duration: 0.5s;
+        animation-timing-function: ease-out;
+        animation-name: about-us-slide-in;
+        animation-fill-mode: backwards;
+        animation-play-state: paused;
+        animation-delay: ($i * .3s) + 1.8s;
+        .animatable .section.active .about-us__slides-item.active & {
+            animation-play-state: running;
+        }
+    }
+}
+
+
+@for $i from 1 through 15 {
+    .about-us__our-services-navigation-list-item:nth-child(#{$i}) {
+        animation-duration: 0.5s;
+        animation-timing-function: ease-out;
+        animation-name: about-us-slide-in;
+        animation-fill-mode: backwards;
+        animation-play-state: paused;
+        animation-delay: ($i * .3s) + 1s;
+        .animatable .section.active .about-us__slides-item.active & {
+            animation-play-state: running;
+        }
+    }
+}
+
+@for $i from 1 through 15 {
+    .about-us__our-projects-list-item:nth-child(#{$i}) {
+        animation-duration: 0.5s;
+        animation-timing-function: ease-out;
+        animation-name: about-us-slide-in;
+        animation-fill-mode: backwards;
+        animation-play-state: paused;
+        animation-delay: ($i * .3s) + 1s;
+        .animatable .section.active .about-us__slides-item.active & {
+            animation-play-state: running;
+        }
+    }
+}
+
+@keyframes about-us-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes about-us-slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(6rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.last-news__heading {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-name: last-news-fade-in;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+    animation-delay: 1s;
+    .animatable .section.active & {
+        animation-play-state: running;
+    }
+}
+
+
+.last-news__show-all {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-name: last-news-fade-in;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+    animation-delay: 1s;
+    .animatable .section.active & {
+        animation-play-state: running;
+    }
+}
+
+
+.last-news__slider {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-name: last-news-fade-in;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+    animation-delay: 1.5s;
+    .animatable .section.active & {
+        animation-play-state: running;
+    }
+}
+
+
+.last-news__slider-card-title {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-name: last-news-slide-in;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+    animation-delay: 2s;
+    .animatable .section.active & {
+        animation-play-state: running;
+    }
+}
+
+
+
+.last-news__slider-card-date {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-name: last-news-slide-in;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+    animation-delay: 2.2s;
+    .animatable .section.active & {
+        animation-play-state: running;
+    }
+}
+
+
+
+.last-news__slider-arrow-btn {
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
+    animation-name: last-news-fade-in;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+    animation-delay: 2.4s;
+    .animatable .section.active & {
+        animation-play-state: running;
+    }
+}
+
+
+.last-news__others-heading {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-name: last-news-fade-in;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+    animation-delay: 2.4s;
+    .animatable .section.active & {
+        animation-play-state: running;
+    }
+}
+
+
+@for $i from 1 through 15 {
+    .last-news__others-list-item:nth-child(#{$i}) {
+        animation-duration: 0.5s;
+        animation-timing-function: ease-out;
+        animation-name: last-news-slide-in-right;
+        animation-fill-mode: backwards;
+        animation-play-state: paused;
+        animation-delay: ($i * .3s) + 2.6s;
+        .animatable .section.active & {
+            animation-play-state: running;
+        }
+    }
+}
+
+
+@keyframes last-news-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes last-news-slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(4rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes last-news-slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(4rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+.last-projects__heading {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-name: last-projects-fade-in;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+    animation-delay: 1s;
+    .animatable .section.active & {
+        animation-play-state: running;
+    }
+}
+
+
+.last-projects__read-more-btn {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-name: last-projects-fade-in;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+    animation-delay: 1s;
+    .animatable .section.active & {
+        animation-play-state: running;
+    }
+}
+
+
+@for $i from 1 through 15 {
+    .last-projects__list-item:nth-child(#{$i}) {
+        animation-duration: 0.5s;
+        animation-timing-function: ease-out;
+        animation-name: last-projects-fade-in;
+        animation-fill-mode: backwards;
+        animation-play-state: paused;
+        animation-delay: ($i * .5s) + 1s;
+        .animatable .section.active & {
+            animation-play-state: running;
+        }
+    }
+}
+
+
+.footer {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-name: last-projects-fade-in;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+    animation-delay: 1s;
+    .animatable .section.active & {
+        animation-play-state: running;
+    }
+}
+
+
+@keyframes last-projects-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+* {
+    @include breakpoint(mobile) {
+        animation-name: none !important;
+    }
+}

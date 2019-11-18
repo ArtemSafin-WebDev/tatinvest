@@ -8,7 +8,7 @@ export default function() {
 
         let timer = null;
         let activeIndex = 0;
-        const autoplayInterval = 5000;
+        const autoplayInterval = 8000;
         let autoplay = true;
 
         function handleLinkClick(index) {
@@ -31,7 +31,7 @@ export default function() {
             if (autoplay && bars[activeIndex]) {
                 setTimeout(function() {
                     bars[activeIndex].style.transform = 'scaleX(1)';
-                    bars[activeIndex].style.transitionDuration = `${5000 / 1000}s`;
+                    bars[activeIndex].style.transitionDuration = `${autoplayInterval / 1000}s`;
                 }, 200);
             }
 
