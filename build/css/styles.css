@@ -4845,7 +4845,7 @@ img {
     .projects__all-slider-pagination {
       position: static;
       padding: 0;
-      margin-top: 4rem; } }
+      margin-top: 2rem; } }
   .projects__all-slider-pagination .swiper-pagination-progressbar {
     background-color: rgba(20, 18, 21, 0.1); }
   .projects__all-slider-pagination .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
@@ -4867,6 +4867,9 @@ img {
 
 .projects__all-slider {
   margin-top: 8rem; }
+  @media only screen and (max-width: 768px) {
+    .projects__all-slider {
+      margin-top: 4rem; } }
   .projects__all-slider .swiper-container {
     overflow: visible; }
   .projects__all-slider .swiper-slide {

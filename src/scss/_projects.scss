@@ -36,7 +36,7 @@
     @include breakpoint(mobile) {
         position: static;
         padding: 0;
-        margin-top: 4rem;
+        margin-top: 2rem;
     }
     .swiper-pagination-progressbar {
         background-color: rgba(20, 18, 21, 0.1);
@@ -64,7 +64,9 @@
 
 .projects__all-slider {
     margin-top: 8rem;
-
+    @include breakpoint(mobile) {
+        margin-top: 4rem;
+    }
     .swiper-container {
         overflow: visible;
     }
