@@ -91,9 +91,9 @@
 .breadcrumbs__item {
     margin-right: 1rem;
     &::after {
-        content: ' / ';
+        content: ' > ';
         margin-left: 1rem;
-        color: lightgrey;
+        color: black;
     }
     &:last-child {
         margin-right: 0;
@@ -105,10 +105,15 @@
 
 
 .breadcrumbs__link {
+    text-transform: uppercase;
     
+    letter-spacing: 0.13em;
+    font-size: 12px;
+    line-height: 1.7;
+    color: black;
     &:link,
     &:visited {
-        color: lightgrey;
+        color: black;
     }
 
 
@@ -119,7 +124,7 @@
 
 
     .breadcrumbs__item.active & {
-        color: darkgrey;
+        color: black;
     }
 }
 

@@ -27,6 +27,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #fff;
     transition: background-color 0.2s, border-color 0.2s;
     @include breakpoint(mobile) {
         display: none;
@@ -308,6 +309,49 @@
     .single-section & {
         display: none;
     }
+}
+
+
+.page-sidebar-right__slider-arrow {
+    width: 4.6rem;
+    height: 4.6rem;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+    transform: rotate(-90deg);
+    display: none;
+    &.reversed {
+        transform: rotate(90deg);
+    }
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: black;
+        color: white;
+    }
+
+    
+    > svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+        fill: black;
+        transition: fill 0.2s;
+    }
+
+    .dark-elements & {
+        color: white;
+        > svg {
+            fill: white;
+        }
+    }
+
+    .dark-elements.no-touch &:hover,
+    .dark-elements.touch &:active {
+        background-color: white;
+        color: black;
+    }
+
 }
 
 

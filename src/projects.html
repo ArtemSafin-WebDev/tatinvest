@@ -1,0 +1,107 @@
+{% set title = "Проекты" %} {% extends "layout.html" %} {% block content %}
+
+<div id="fullpage">
+    <div class="section fp-auto-height-responsive">
+        <div class="projects js-all-projects-slider">
+            <div class="header">
+                <img src="img/logo/logo-dark.svg" alt="Лого" class="header__logo" />
+                <div class="header__main-nav-wrapper js-burger-wrapper">
+                    <nav class="main-nav">
+                        <a href="#" class="header__main-nav-close js-burger-close">
+                            <svg width="35" height="35" aria-hidden="true" class="icon-cross">
+                                <use xlink:href="#cross" />
+                            </svg>
+                        </a>
+                        <ul class="main-nav__list">
+                            <li class="main-nav__list-item active">
+                                <a href="index.html" class="main-nav__link">Главная</a>
+                            </li>
+                            <li class="main-nav__list-item">
+                                <a href="news.html" class="main-nav__link">Пресс-центр</a>
+                            </li>
+                            <li class="main-nav__list-item">
+                                <a href="about-company.html" class="main-nav__link">О Компании</a>
+                            </li>
+                            <li class="main-nav__list-item">
+                                <a href="#" class="main-nav__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <a href="#" class="header__burger-btn js-burger-open">
+                    <span></span>
+                    <span></span>
+                </a>
+                <a href="#" class="header__watch-more js-watch-more">
+                    Смотреть дальше
+                </a>
+            </div>
+            <div class="projects__content">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item">
+                        <a href="index.html" class="breadcrumbs__link">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__item active">
+                        <a href="projecting.html" class="breadcrumbs__link">Проекты</a>
+                    </li>
+                </ul>
+                <div class="projects__all-slider">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="projects__all-slider-card">
+                                    <span class="projects__all-slider-card-number-top">
+                                        01
+                                    </span>
+                                    <div class="projects__all-slider-card-row">
+                                        <div class="projects__all-slider-card-left-column">
+                                            <div class="projects__all-slider-card-image-container">
+                                                <img src="img/volley.jpg" alt="" class="projects__all-slider-card-image" />
+                                            </div>
+                                        </div>
+                                        <div class="projects__all-slider-card-right-column">
+                                            <h3 class="projects__all-slider-card-heading">
+                                                Проекты повторного применения
+                                            </h3>
+                                            <span class="projects__all-slider-card-number-bottom">
+                                                01
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="projects__all-slider-card">
+                                    <span class="projects__all-slider-card-number-top">
+                                        02
+                                    </span>
+                                    <div class="projects__all-slider-card-row">
+                                        <div class="projects__all-slider-card-left-column">
+                                            <div class="projects__all-slider-card-image-container">
+                                                <img src="img/tennis.jpg" alt="" class="projects__all-slider-card-image" />
+                                            </div>
+                                        </div>
+                                        <div class="projects__all-slider-card-right-column">
+                                            <h3 class="projects__all-slider-card-heading">
+                                                Универсиада 2013
+                                            </h3>
+                                            <span class="projects__all-slider-card-number-bottom">
+                                                02
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projects__all-slider-pagination">
+                <div class="projects__all-slider-pagination-bar js-projects-all-slider-pagination"></div>
+                <div class="projects__all-slider-pagination-fraction js-projects-all-slider-pagination-fraction"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

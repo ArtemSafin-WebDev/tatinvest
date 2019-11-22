@@ -7,6 +7,7 @@ import sideMenu from './sideMenu';
 import modals from './modals';
 import burgerMenu from './burgerMenu';
 import smoothScrolling from './smoothScrolling';
+import allProjectsSlider from './allProjectsSlider';
 
 export default function() {
     let lastSection = false;
@@ -98,6 +99,10 @@ export default function() {
             // Smooth scrolling
 
             smoothScrolling();
+
+            // All projects slider
+
+            allProjectsSlider();
 
             // Rebuild to account new height
 
