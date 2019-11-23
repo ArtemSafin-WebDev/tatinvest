@@ -9,10 +9,10 @@
 
         <link rel="stylesheet" href="css/styles.min.css" />
         <title>
-            Главная страница
+            Страница проекта
         </title>
     </head>
-    <body class="no-touch " ontouchstart="">
+    <body class="no-touch  dark-elements " ontouchstart="">
         <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
             <?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <symbol viewBox="0 0 23 23" id="cross" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +47,7 @@
                 <div class="container">
                     <div id="fullpage">
                         <div class="section fp-auto-height-responsive">
-                            <div class="news">
+                            <div class="project">
                                 <div class="header">
                                     <img src="img/logo/logo-dark.svg" alt="Лого" class="header__logo" />
                                     <img src="img/logo/logo-light.svg" alt="Лого" class="header__logo header__logo--light" />
@@ -87,125 +87,161 @@
                                     <li class="breadcrumbs__item">
                                         <a href="index.html" class="breadcrumbs__link">Главная</a>
                                     </li>
+                                    <li class="breadcrumbs__item">
+                                        <a href="projects.html" class="breadcrumbs__link">Проекты</a>
+                                    </li>
                                     <li class="breadcrumbs__item active">
-                                        <a href="news.html" class="breadcrumbs__link">Пресс-центр</a>
+                                        <a href="project.html" class="breadcrumbs__link">16 квартирный жилой дом (2-х этажный) с наружными инженерными сетями ул.Пионерская, 35А, г. Болгар Спасский муниципальный район РТ</a>
                                     </li>
                                 </ul>
-                                <h2 class="news__heading">
-                                    Пресс-центр
-                                </h2>
-                                <div class="news__content">
-                                    <div class="news__slider js-last-news-slider">
-                                        <div class="swiper-container">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <a href="#" class="last-news__slider-card">
-                                                        <img src="img/school.jpg" alt="Изображение в слайде" class="last-news__slider-card-image" />
-                                                        <div class="last-news__slider-card-content">
-                                                            <h5 class="last-news__slider-card-title">
-                                                                В Казани открылся детский сад с татарским языком обучения
-                                                            </h5>
-                                                            <p class="last-news__slider-card-date">новости <span class="date">/ август 2019</span></p>
+                                <div class="project__content">
+                                    <div class="project__slider js-project-item-slider">
+                                        <div class="project__slider-pagination">
+                                            <span class="project__slider-pagination-current">
+                                                01
+                                            </span>
+                                            <span class="project__slider-pagination-bar js-project-item-progressbar"> </span>
+                                            <span class="project__slider-pagination-total">
+                                                02
+                                            </span>
+                                        </div>
+                                        <div class="project__slider-wrapper">
+                                            <div class="swiper-container">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="project__slider-card">
+                                                            <div class="project__slider-card-left-column">
+                                                                <div class="project__slider-card-image-container">
+                                                                    <img src="img/project.jpg" alt="Проект" class="project__slider-card-image" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="project__slider-card-right-column">
+                                                                <h4 class="project__slider-card-heading">
+                                                                    16 квартирный жилой дом (2-х этажный) с наружными инженерными сетями ул.Пионерская, 35А, г. Болгар Спасский муниципальный район РТ
+                                                                </h4>
+                                                            </div>
                                                         </div>
-                                                    </a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a href="#" class="last-news__slider-card">
-                                                        <img src="img/school.jpg" alt="Изображение в слайде" class="last-news__slider-card-image" />
-                                                        <div class="last-news__slider-card-content">
-                                                            <h5 class="last-news__slider-card-title">
-                                                                В Казани открылся детский сад с татарским языком обучения
-                                                            </h5>
-                                                            <p class="last-news__slider-card-date">новости <span class="date">/ август 2019</span></p>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="project__slider-card">
+                                                            <div class="project__slider-card-left-column">
+                                                                <div class="project__slider-card-image-container">
+                                                                    <img src="img/project.jpg" alt="Проект" class="project__slider-card-image" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="project__slider-card-right-column">
+                                                                <h4 class="project__slider-card-heading">
+                                                                    Второй слайд
+                                                                </h4>
+                                                            </div>
                                                         </div>
-                                                    </a>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="project-slider__number-wrapper">
+                                                <span class="project-slider__number js-project-item-slider-number">
+                                                    01
+                                                </span>
+                                            </div>
+                                            <div class="project__slider-arrows">
+                                                <a href="#" class="project__slider-arrow project__slider-arrow--prev">
+                                                    <svg width="5" height="10" aria-hidden="true" class="icon-arrow">
+                                                        <use xlink:href="#left-arrow" />
+                                                    </svg>
+                                                </a>
+                                                <a href="#" class="project__slider-arrow project__slider-arrow--next">
+                                                    <svg width="5" height="10" aria-hidden="true" class="icon-arrow">
+                                                        <use xlink:href="#right-arrow" />
+                                                    </svg>
+                                                </a>
+                                            </div>
                                         </div>
-                                        <div class="last-news__slider-arrows">
-                                            <a href="#" class="last-news__slider-arrow-btn last-news__slider-arrow-btn--prev">
-                                                <svg width="5" height="10" aria-hidden="true" class="icon-arrow">
-                                                    <use xlink:href="#left-arrow" />
-                                                </svg>
-                                            </a>
-                                            <a href="#" class="last-news__slider-arrow-btn last-news__slider-arrow-btn--next">
-                                                <svg width="5" height="10" aria-hidden="true" class="icon-arrow">
-                                                    <use xlink:href="#right-arrow" />
-                                                </svg>
-                                            </a>
-                                        </div>
-                                        <div class="last-news__slider-pagination"></div>
                                     </div>
-                                    <ul class="last-news__others-list">
-                                        <li class="last-news__others-list-item">
-                                            <a href="#" class="last-news__others-card">
-                                                <div class="last-news__others-card-image-container">
-                                                    <img src="img/nkc.jpg" alt="НКЦ" class="last-news__others-card-image" />
-                                                </div>
-                                                <div class="last-news__others-card-info">
-                                                    <h5 class="last-news__others-card-title">
-                                                        В НКЦ "Казань приступили к реконструкции
-                                                    </h5>
-                                                    <p class="last-news__others-card-date">новости <span class="date">/ сентябрь 2019 </span></p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="last-news__others-list-item">
-                                            <a href="#" class="last-news__others-card">
-                                                <div class="last-news__others-card-image-container">
-                                                    <img src="img/IMG_2469.jpg" alt="НКЦ" class="last-news__others-card-image" />
-                                                </div>
-                                                <div class="last-news__others-card-info">
-                                                    <h5 class="last-news__others-card-title">
-                                                        В Татарстане открыли 4 новых школы
-                                                    </h5>
-                                                    <p class="last-news__others-card-date">новости <span class="date">/ июль 2019 </span></p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="last-news__others-list-item">
-                                            <a href="#" class="last-news__others-card">
-                                                <div class="last-news__others-card-image-container">
-                                                    <img src="img/zoo.jpg" alt="НКЦ" class="last-news__others-card-image" />
-                                                </div>
-                                                <div class="last-news__others-card-info">
-                                                    <h5 class="last-news__others-card-title">
-                                                        Рустам Минниханов посетил новый зоопарк
-                                                    </h5>
-                                                    <p class="last-news__others-card-date">новости <span class="date">/ июнь 2019 </span></p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="last-news__others-list-item">
-                                            <a href="#" class="last-news__others-card">
-                                                <div class="last-news__others-card-image-container">
-                                                    <img src="img/nkc.jpg" alt="НКЦ" class="last-news__others-card-image" />
-                                                </div>
-                                                <div class="last-news__others-card-info">
-                                                    <h5 class="last-news__others-card-title">
-                                                        В НКЦ "Казань приступили к реконструкции
-                                                    </h5>
-                                                    <p class="last-news__others-card-date">новости <span class="date">/ сентябрь 2019 </span></p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
+                                    <div class="project__info">
+                                        <h3 class="project__info-heading">
+                                            Информация
+                                        </h3>
+                                        <div class="project__info-text">
+                                            <p>
+                                                Академия тенниса расположена по ул. Оренбургский тракт в г. Казани в радиусе пешеходной доступности от Деревни Универсиады. В комплекс входят два спортивных зала. В тренировочном зале предусмотрено 4
+                                                корта и устройство трибун на 396 посадочных мест. В соревновательном зале предусмотрены 1 центральный корт для проведения соревнований, 4 тренировочных корта и устройство трибун на 3 120 посадочных
+                                                мест. Кроме того, в комплексе размещен фитнес-центр, тренажерный зал, ресторан, 2 кафе и конференц-зал. Проект Академии тенниса разработан в соответствии с международными требованиям FISU. Здание
+                                                выполнено в современном стиле с использованием высоко-технологичных материалов. Особенностью здания является фасадная конструкция, выполненная из полимерных материалов с анимированной ночной подсветкой.
+                                                Кроме того, на открытой территории предусмотрены 18 открытых теннисных кортов
+                                            </p>
+                                        </div>
+                                        <h3 class="project__info-heading">
+                                            Показатели:
+                                        </h3>
+                                        <table class="project__info-table">
+                                            <tr>
+                                                <th>
+                                                    Общая площадь здания
+                                                </th>
+                                                <td>
+                                                    700.2 м2
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    Строительный объем здания
+                                                </th>
+                                                <td>
+                                                    4125.3 м3
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    Площадь застройки
+                                                </th>
+                                                <td>
+                                                    499.1 м2
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    Количество этажей
+                                                </th>
+                                                <td>
+                                                    2
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    Стадия проектирования
+                                                </th>
+                                                <td>
+                                                    «Проект»‎
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <h3 class="project__info-heading">
+                                            Приложения
+                                        </h3>
+                                        <ul class="project__info-attachments-list">
+                                            <li class="project__info-attachments-list-item">
+                                                <a href="#" class="project__info-attachments-link">
+                                                    Паспорт проекта повторного применения
+                                                </a>
+                                            </li>
+                                            <li class="project__info-attachments-list-item">
+                                                <a href="#" class="project__info-attachments-link">
+                                                    Цветовое решение фасадов
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <ul class="pagination">
-                                    <li class="pagination__item">
-                                        <a href="#" class="pagination__link">1</a>
-                                    </li>
-                                    <li class="pagination__item">
-                                        <a href="#" class="pagination__link">2</a>
-                                    </li>
-                                    <li class="pagination__item active">
-                                        <a href="#" class="pagination__link">3</a>
-                                    </li>
-                                    <li class="pagination__item">
-                                        <a href="#" class="pagination__link">Последняя</a>
-                                    </li>
-                                </ul>
-                                <div class="footer footer--dark">
+                                <div class="prev-next">
+                                    <a href="projects.html" class="prev">
+                                        Назад
+                                    </a>
+                                    <a href="project.html" class="next">
+                                        смотреть следующий проект
+                                    </a>
+                                </div>
+                                <div class="footer">
                                     <ul class="footer__list">
                                         <li class="footer__list-item">
                                             <a href="vacancy.html" class="footer__link">Вакансии</a>

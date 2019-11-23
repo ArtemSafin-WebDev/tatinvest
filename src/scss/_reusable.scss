@@ -9,7 +9,7 @@
     background-color: $darkest;
     padding: 2.1rem 3rem;
     border: 1px solid $darkest;
-    transition: all .2s;
+    transition: all 0.2s;
     display: inline-block;
     @include breakpoint(mobile) {
         font-size: 1rem;
@@ -29,7 +29,6 @@
     }
 }
 
-
 .btn-not-filled {
     color: rgba(white, 0.7);
     font-size: 1.3rem;
@@ -37,9 +36,9 @@
     text-transform: uppercase;
     letter-spacing: 0.13em;
     display: inline-block;
-    padding: .8rem 2rem;
+    padding: 0.8rem 2rem;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: border-color .2s, color .2s;
+    transition: border-color 0.2s, color 0.2s;
     &:link,
     &:visited {
         color: rgba(white, 0.7);
@@ -52,8 +51,6 @@
     }
 }
 
-
-
 .btn-not-filled-dark {
     color: rgba(black, 0.7);
     font-size: 1.3rem;
@@ -61,9 +58,9 @@
     text-transform: uppercase;
     letter-spacing: 0.13em;
     display: inline-block;
-    padding: .8rem 2rem;
-    border: 1px solid rgba(black, .15);
-    transition: border-color .2s, color .2s;
+    padding: 0.8rem 2rem;
+    border: 1px solid rgba(black, 0.15);
+    transition: border-color 0.2s, color 0.2s;
     &:link,
     &:visited {
         color: rgba(black, 0.7);
@@ -71,22 +68,20 @@
 
     .no-touch &:hover,
     .touch &:active {
-        color: #1F1D21;
-        border-color: #1F1D21;
+        color: #1f1d21;
+        border-color: #1f1d21;
     }
 }
-
-
 
 .breadcrumbs {
     display: flex;
     align-items: center;
     margin-bottom: 2rem;
+    flex-wrap: wrap;
     @include breakpoint(mobile) {
         margin-top: 3rem;
     }
 }
-
 
 .breadcrumbs__item {
     margin-right: 1rem;
@@ -94,6 +89,10 @@
         content: ' > ';
         margin-left: 1rem;
         color: black;
+        font-size: 1.2rem;
+        .dark-elements & {
+            color: white;
+        }
     }
     &:last-child {
         margin-right: 0;
@@ -103,12 +102,11 @@
     }
 }
 
-
 .breadcrumbs__link {
     text-transform: uppercase;
-    
+
     letter-spacing: 0.13em;
-    font-size: 12px;
+    font-size: 1.2rem;
     line-height: 1.7;
     color: black;
     &:link,
@@ -116,24 +114,26 @@
         color: black;
     }
 
+    .dark-elements & {
+        color: white;
+    }
 
     .no-touch &:hover,
     .touch &:active {
         text-decoration: underline;
     }
 
-
     .breadcrumbs__item.active & {
         color: black;
     }
+
+    .dark-elements .breadcrumbs__item.active & {
+        color: white;
+        opacity: 0.5;
+        pointer-events: none;
+        cursor: default;
+    }
 }
-
-
-
-
-
-
-
 
 .pagination {
     display: flex;
@@ -144,12 +144,11 @@
     }
 }
 
-
 .pagination__item {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
     &::after {
         content: ' / ';
-        margin-left: .5rem;
+        margin-left: 0.5rem;
         color: lightgrey;
     }
     &:last-child {
@@ -160,22 +159,98 @@
     }
 }
 
-
 .pagination__link {
-    
     &:link,
     &:visited {
         color: lightgrey;
     }
-
 
     .no-touch &:hover,
     .touch &:active {
         text-decoration: underline;
     }
 
-
     .pagination__item.active & {
         color: darkgrey;
+    }
+}
+
+.prev-next {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 10rem 0;
+    @include breakpoint(mobile) {
+        margin: 3rem 0;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: initial;
+    }
+}
+
+.prev,
+.next {
+    font-size: 1.2rem;
+  
+    line-height: 1.4;
+    color: white;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+
+    transition: color .2s;
+    &:link,
+    &:visited {
+        
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: white;
+    }
+
+
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+}
+
+.prev {
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+    &::before {
+        content: '';
+        display: block;
+        border-style: solid;
+        border-width: 0.75rem 1rem 0.75rem 0;
+        border-color: transparent currentColor transparent transparent;
+        margin-right: 3.5rem;
+        @include breakpoint(mobile) {
+            margin-right: 1.5rem;
+        }
+    }
+}
+
+.next {
+    margin-left: 8rem;
+    @include breakpoint(mobile) {
+        margin-left: 0;
+    }
+    &::after {
+        content: '';
+        display: block;
+        border-style: solid;
+        border-style: solid;
+        border-width: 0.75rem 0 0.75rem 1rem;
+        border-color: transparent transparent transparent currentColor;
+        margin-left: 3.5rem;
+        @include breakpoint(mobile) {
+            margin-left: 1.5rem;
+        }
     }
 }

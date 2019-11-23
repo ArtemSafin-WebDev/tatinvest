@@ -1,0 +1,185 @@
+{% set title = "Страница проекта" %} {% set pageColor = "dark" %} {% extends "layout.html" %} {% block content %}
+
+<div id="fullpage">
+    <div class="section fp-auto-height-responsive">
+        <div class="project">
+            {% include "partials/header.html" %}
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a href="index.html" class="breadcrumbs__link">Главная</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a href="projects.html" class="breadcrumbs__link">Проекты</a>
+                </li>
+                <li class="breadcrumbs__item active">
+                    <a href="project.html" class="breadcrumbs__link">16 квартирный жилой дом (2-х этажный) с наружными инженерными сетями ул.Пионерская, 35А, г. Болгар Спасский муниципальный район РТ</a>
+                </li>
+            </ul>
+            <div class="project__content">
+                <div class="project__slider js-project-item-slider">
+                    <div class="project__slider-pagination">
+                        <span class="project__slider-pagination-current">
+                            01
+                        </span>
+                        <span class="project__slider-pagination-bar js-project-item-progressbar"> </span>
+                        <span class="project__slider-pagination-total">
+                            02
+                        </span>
+                    </div>
+                    <div class="project__slider-wrapper">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="project__slider-card">
+                                        <div class="project__slider-card-left-column">
+                                            <div class="project__slider-card-image-container">
+                                                <img src="img/project.jpg" alt="Проект" class="project__slider-card-image" />
+                                            </div>
+                                        </div>
+                                        <div class="project__slider-card-right-column">
+                                            <h4 class="project__slider-card-heading">
+                                                16 квартирный жилой дом (2-х этажный) с наружными инженерными сетями ул.Пионерская, 35А, г. Болгар Спасский муниципальный район РТ
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="project__slider-card">
+                                        <div class="project__slider-card-left-column">
+                                            <div class="project__slider-card-image-container">
+                                                <img src="img/project.jpg" alt="Проект" class="project__slider-card-image" />
+                                            </div>
+                                        </div>
+                                        <div class="project__slider-card-right-column">
+                                            <h4 class="project__slider-card-heading">
+                                                Второй слайд
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-slider__number-wrapper">
+                            <span class="project-slider__number js-project-item-slider-number">
+                                01
+                            </span>
+                        </div>
+                        <div class="project__slider-arrows">
+                            <a href="#" class="project__slider-arrow project__slider-arrow--prev">
+                                <svg width="5" height="10" aria-hidden="true" class="icon-arrow">
+                                    <use xlink:href="#left-arrow" />
+                                </svg>
+                            </a>
+                            <a href="#" class="project__slider-arrow project__slider-arrow--next">
+                                <svg width="5" height="10" aria-hidden="true" class="icon-arrow">
+                                    <use xlink:href="#right-arrow" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project__info">
+                    <h3 class="project__info-heading">
+                        Информация
+                    </h3>
+                    <div class="project__info-text">
+                        <p>
+                            Академия тенниса расположена по ул. Оренбургский тракт в г. Казани в радиусе пешеходной доступности от Деревни Универсиады. В комплекс входят два спортивных зала. В тренировочном зале предусмотрено 4 корта и устройство
+                            трибун на 396 посадочных мест. В соревновательном зале предусмотрены 1 центральный корт для проведения соревнований, 4 тренировочных корта и устройство трибун на 3 120 посадочных мест. Кроме того, в комплексе размещен
+                            фитнес-центр, тренажерный зал, ресторан, 2 кафе и конференц-зал. Проект Академии тенниса разработан в соответствии с международными требованиям FISU. Здание выполнено в современном стиле с использованием
+                            высоко-технологичных материалов. Особенностью здания является фасадная конструкция, выполненная из полимерных материалов с анимированной ночной подсветкой. Кроме того, на открытой территории предусмотрены 18 открытых
+                            теннисных кортов
+                        </p>
+                    </div>
+                    <h3 class="project__info-heading">
+                        Показатели:
+                    </h3>
+                    <table class="project__info-table">
+                        <tr>
+                            <th>
+                                Общая площадь здания
+                            </th>
+                            <td>
+                                700.2 м2
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Строительный объем здания
+                            </th>
+                            <td>
+                                4125.3 м3
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Площадь застройки
+                            </th>
+                            <td>
+                                499.1 м2
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Количество этажей
+                            </th>
+                            <td>
+                                2
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Стадия проектирования
+                            </th>
+                            <td>
+                                «Проект»‎
+                            </td>
+                        </tr>
+                    </table>
+
+                    <h3 class="project__info-heading">
+                        Приложения
+                    </h3>
+                    <ul class="project__info-attachments-list">
+                        <li class="project__info-attachments-list-item">
+                            <a href="#" class="project__info-attachments-link">
+                                Паспорт проекта повторного применения
+                            </a>
+                        </li>
+                        <li class="project__info-attachments-list-item">
+                            <a href="#" class="project__info-attachments-link">
+                                Цветовое решение фасадов
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="prev-next">
+                <a href="projects.html" class="prev">
+                    Назад
+                </a>
+                <a href="project.html" class="next">
+                    смотреть следующий проект
+                </a>
+            </div>
+            <div class="footer">
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a href="vacancy.html" class="footer__link">Вакансии</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Руководитель</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Реквизиты</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Контактная информация</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

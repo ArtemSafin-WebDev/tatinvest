@@ -8,22 +8,33 @@ import modals from './modals';
 import burgerMenu from './burgerMenu';
 import smoothScrolling from './smoothScrolling';
 import allProjectsSlider from './allProjectsSlider';
+import projectItemSlider from './projectItemSlider';
 
 export default function() {
     let lastSection = false;
     let firstSection = false;
     let fullpageSlider = null;
+    let darkThemeRemovable = true;
 
     const pageNumber = document.querySelector('.js-page-number');
+
+    if (document.body.classList.contains('dark-elements')) {
+        darkThemeRemovable = false;
+    }
 
     const slideChangeHandler = (origin, destination, direction) => {
         // Make elements dark
 
-        if (!!(destination.index % 2)) {
-            document.body.classList.add('dark-elements');
-        } else {
-            document.body.classList.remove('dark-elements');
+
+        if (darkThemeRemovable) {
+            if (!!(destination.index % 2)) {
+                document.body.classList.add('dark-elements');
+            } else {
+                document.body.classList.remove('dark-elements');
+            }
         }
+
+       
 
         // Check if section is first or last
 
@@ -56,6 +67,11 @@ export default function() {
         responsiveWidth: 769,
         scrollOverflow: true,
         lockAnchors: true,
+        scrollOverflowOptions: {
+            disableMouse: true,
+            disablePointer: true,
+            disableTouch: false
+        },
         afterRender: function() {
             const arrow = document.querySelector('.js-fullpage-arrow');
             if (arrow) {
@@ -103,6 +119,10 @@ export default function() {
             // All projects slider
 
             allProjectsSlider();
+
+            // Project item slider
+
+            projectItemSlider();
 
             // Rebuild to account new height
 

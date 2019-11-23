@@ -53,14 +53,14 @@
 
     .dark-elements & {
         // border-color: #2b292c;
-        border-color: rgba(white, .5);
+        border-color: rgba(white, .2);
     }
 }
 .page-sidebar-right {
     border-left: 1px solid #bcbbbc;
     .dark-elements & {
         // border-color: #2b292c;
-        border-color: rgba(white, .5);
+        border-color: rgba(white, .2);
     }
 
     // .first-section & {
@@ -411,4 +411,11 @@
 
 .fp-responsive .fullpage-wrapper {
     transform: initial !important;
+}
+
+
+.iScrollIndicator {
+    .dark-elements & {
+        background-color: rgba(white, .2) !important;
+    }
 }

@@ -427,6 +427,10 @@
     .animatable .section.active & {
         animation-play-state: running;
     }
+
+    .single-section & {
+        animation-name: none;
+    }
 }
 
 @keyframes last-projects-fade-in {

@@ -1,1 +1,34 @@
-<h2>Header</h2>
+<div class="header">
+    <img src="img/logo/logo-dark.svg" alt="Лого" class="header__logo" />
+    <img src="img/logo/logo-light.svg" alt="Лого" class="header__logo header__logo--light" />
+    <div class="header__main-nav-wrapper js-burger-wrapper">
+        <nav class="main-nav">
+            <a href="#" class="header__main-nav-close js-burger-close">
+                <svg width="35" height="35" aria-hidden="true" class="icon-cross">
+                    <use xlink:href="#cross" />
+                </svg>
+            </a>
+            <ul class="main-nav__list">
+                <li class="main-nav__list-item active">
+                    <a href="index.html" class="main-nav__link">Главная</a>
+                </li>
+                <li class="main-nav__list-item">
+                    <a href="news.html" class="main-nav__link">Пресс-центр</a>
+                </li>
+                <li class="main-nav__list-item">
+                    <a href="about-company.html" class="main-nav__link">О Компании</a>
+                </li>
+                <li class="main-nav__list-item">
+                    <a href="contacts.html" class="main-nav__link">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <a href="#" class="header__burger-btn js-burger-open">
+        <span></span>
+        <span></span>
+    </a>
+    <a href="#" class="header__watch-more js-watch-more">
+        Смотреть дальше
+    </a>
+</div>
